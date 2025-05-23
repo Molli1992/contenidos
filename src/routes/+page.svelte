@@ -1,8 +1,8 @@
 <script lang="ts">
 	import HeroSection from '../components/HeroSection.svelte';
+	import heroImg from '../images/home-img.jpg';
 
-	const imageUrl =
-		'https://www.brandingmag.com/wp-content/uploads/2023/02/MaorOfek_Image2_1200x676PIXELS.jpg';
+	const imageUrl = heroImg;
 	const title = 'We move the digital industry forward';
 	const description =
 		'We specialize in brand identities, campaigns, social strategies & content creation, commercials, websites, apps, books, environment, and more.';
