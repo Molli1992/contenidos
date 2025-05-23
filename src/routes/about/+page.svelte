@@ -1,6 +1,6 @@
 <script lang="ts">
 	import HeroSection from '../../components/HeroSection.svelte';
-	import heroImg from '../../images/about-us-img.avif';
+	import heroImg from '../../assets/about-us-img.avif';
 
 	const imageUrl = heroImg;
 	const title = 'Where Creativity Meets Strategic Growth';
