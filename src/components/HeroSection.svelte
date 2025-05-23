@@ -2,7 +2,8 @@
 	let { imageUrl, title, description }: { imageUrl: string; title: string; description: string } =
 		$props();
 
-	const backgroundGradient: string = 'linear-gradient(rgba(25, 25, 70, 0.4))';
+	const backgroundGradient: string =
+		'linear-gradient(to bottom, rgba(25, 25, 70, 0.4), rgba(25, 25, 70, 0.4))';
 </script>
 
 <div class="hero-section" style="background-image: {backgroundGradient}, url('{imageUrl}');">
