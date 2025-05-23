@@ -13,14 +13,8 @@
 		<p in:fly={{ x: 50, duration: 800, delay: 200 }}>{description}</p>
 
 		<div class="hero-buttons" in:fly={{ y: 50, duration: 800 }}>
-			<a href="https://wa.me/XXXXXXXXXXX" target="_blank" class="whatsapp button"> WhatsApp </a>
-			<a
-				href="https://www.instagram.com/tu_usuario_de_instagram"
-				target="_blank"
-				class="instagram button"
-			>
-				Instagram
-			</a>
+			<a href="https://whatsapp.com/" target="_blank" class="whatsapp button"> WhatsApp </a>
+			<a href="https://instagram.com" target="_blank" class="instagram button"> Instagram </a>
 		</div>
 	</div>
 </div>
