@@ -1,17 +1,21 @@
 <script lang="ts">
+	import { fly } from 'svelte/transition';
+
 	let { imageUrl, title, description }: { imageUrl: string; title: string; description: string } =
 		$props();
 
 	const backgroundGradient: string =
 		'linear-gradient(to bottom, rgba(25, 25, 70, 0.4), rgba(25, 25, 70, 0.4))';
+
+	const duration: number = 800;
 </script>
 
 <div class="hero-section" style="background-image: {backgroundGradient}, url('{imageUrl}');">
 	<div class="hero-content">
-		<h1>{title}</h1>
-		<p>{description}</p>
+		<h1 in:fly={{ y: -50, duration: duration, delay: 200 }}>{title}</h1>
+		<p in:fly={{ x: 50, duration: duration, delay: 400 }}>{description}</p>
 
-		<div class="hero-buttons">
+		<div class="hero-buttons" in:fly={{ y: 50, duration: duration, delay: 600 }}>
 			<a href="https://whatsapp.com/" target="_blank" class="whatsapp button"> WhatsApp </a>
 			<a href="https://instagram.com" target="_blank" class="instagram button"> Instagram </a>
 		</div>
