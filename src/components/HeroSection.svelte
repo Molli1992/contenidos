@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
-
 	let { imageUrl, title, description }: { imageUrl: string; title: string; description: string } =
 		$props();
 
@@ -9,10 +7,10 @@
 
 <div class="hero-section" style="background-image: {backgroundGradient}, url('{imageUrl}');">
 	<div class="hero-content">
-		<h1 in:fly={{ y: -50, duration: 800 }}>{title}</h1>
-		<p in:fly={{ x: 50, duration: 800, delay: 200 }}>{description}</p>
+		<h1>{title}</h1>
+		<p>{description}</p>
 
-		<div class="hero-buttons" in:fly={{ y: 50, duration: 800 }}>
+		<div class="hero-buttons">
 			<a href="https://whatsapp.com/" target="_blank" class="whatsapp button"> WhatsApp </a>
 			<a href="https://instagram.com" target="_blank" class="instagram button"> Instagram </a>
 		</div>
