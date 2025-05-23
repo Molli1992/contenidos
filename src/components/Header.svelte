@@ -104,7 +104,7 @@
 		align-items: center;
 		justify-content: space-between;
 		padding: 25px 50px;
-		z-index: 1000;
+		z-index: 9999;
 		background-color: transparent;
 		border-bottom: 1px solid #ffffff;
 	}

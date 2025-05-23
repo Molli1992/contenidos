@@ -45,6 +45,13 @@
 		gap: 20px;
 	}
 
+	.hero-content h1,
+	.hero-content p,
+	.hero-buttons {
+		will-change: transform, opacity;
+		transform: translateZ(0);
+	}
+
 	.hero-content h1 {
 		font-size: 48px;
 	}
