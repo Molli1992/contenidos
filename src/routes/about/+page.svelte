@@ -2,10 +2,10 @@
 	import HeroSection from '../../components/HeroSection.svelte';
 
 	const imageUrl =
-		'https://www.brandingmag.com/wp-content/uploads/2023/02/MaorOfek_Image2_1200x676PIXELS.jpg';
-	const title = 'We move the digital industry forward';
+		'https://img.freepik.com/free-photo/read-before-sign_1098-13315.jpg?semt=ais_hybrid&w=740';
+	const title = 'Where Creativity Meets Strategic Growth';
 	const description =
-		'We specialize in brand identities, campaigns, social strategies & content creation, commercials, websites, apps, books, environment, and more.';
+		"We're more than just an agency; we're your digital partners. Guided by collaboration, transparency, and a relentless pursuit of innovation, we build lasting online presences designed for real-world results.";
 </script>
 
 <div class="body">

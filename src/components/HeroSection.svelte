@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { fly } from 'svelte/transition';
+
 	let { imageUrl, title, description }: { imageUrl: string; title: string; description: string } =
 		$props();
 
@@ -7,10 +9,10 @@
 
 <div class="hero-section" style="background-image: {backgroundGradient}, url('{imageUrl}');">
 	<div class="hero-content">
-		<h1>{title}</h1>
-		<p>{description}</p>
+		<h1 in:fly={{ y: -50, duration: 800 }}>{title}</h1>
+		<p in:fly={{ x: 50, duration: 800, delay: 200 }}>{description}</p>
 
-		<div class="hero-buttons">
+		<div class="hero-buttons" in:fly={{ y: 50, duration: 800 }}>
 			<a href="https://wa.me/XXXXXXXXXXX" target="_blank" class="whatsapp button"> WhatsApp </a>
 			<a
 				href="https://www.instagram.com/tu_usuario_de_instagram"
@@ -98,7 +100,7 @@
 
 	@media (max-width: 600px) {
 		.hero-content h1 {
-			font-size: 42px;
+			font-size: 38px;
 		}
 
 		.hero-content p {

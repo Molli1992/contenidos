@@ -2,10 +2,10 @@
 	import HeroSection from '../../components/HeroSection.svelte';
 
 	const imageUrl =
-		'https://www.brandingmag.com/wp-content/uploads/2023/02/MaorOfek_Image2_1200x676PIXELS.jpg';
-	const title = 'We move the digital industry forward';
+		'https://img.freepik.com/free-photo/marketing-strategy-connting-digital-devices-concept_53876-23053.jpg';
+	const title = "Let's Build Something Great Together";
 	const description =
-		'We specialize in brand identities, campaigns, social strategies & content creation, commercials, websites, apps, books, environment, and more.';
+		"Ready to start your next digital project? Have questions about our services? Reach out to us today and let's discuss how we can help your business thrive.";
 </script>
 
 <div class="body">

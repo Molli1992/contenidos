@@ -1,11 +1,11 @@
 <script lang="ts">
-import HeroSection from '../../components/HeroSection.svelte';
+	import HeroSection from '../../components/HeroSection.svelte';
 
 	const imageUrl =
-		'https://www.brandingmag.com/wp-content/uploads/2023/02/MaorOfek_Image2_1200x676PIXELS.jpg';
-	const title = 'We move the digital industry forward';
+		'https://assets.entrepreneur.com/content/3x2/2000/1733146687-marketing.jpg?format=pjeg&auto=webp&crop=16:9';
+	const title = 'Your Vision, Our Digital Craftsmanship';
 	const description =
-		'We specialize in brand identities, campaigns, social strategies & content creation, commercials, websites, apps, books, environment, and more.';
+		'We offer a full spectrum of digital services designed to transform your ideas into compelling online realities. From strategic planning to flawless execution, we build solutions that drive growth and engagement for your business.';
 </script>
 
 <div class="body">

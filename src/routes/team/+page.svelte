@@ -2,10 +2,10 @@
 	import HeroSection from '../../components/HeroSection.svelte';
 
 	const imageUrl =
-		'https://www.brandingmag.com/wp-content/uploads/2023/02/MaorOfek_Image2_1200x676PIXELS.jpg';
-	const title = 'We move the digital industry forward';
+		'https://smallbizclub.com/wp-content/uploads/2022/06/bigstock-Diversity-Multiethnic-Team-Gro-446118545.jpg';
+	const title = 'Meet the Minds Behind Our Digital Success';
 	const description =
-		'We specialize in brand identities, campaigns, social strategies & content creation, commercials, websites, apps, books, environment, and more.';
+		"We're a passionate collective of strategists, designers, and developers, united by a shared vision for digital innovation. Our diverse expertise and collaborative spirit drive us to create exceptional results for every client.";
 </script>
 
 <div class="body">
