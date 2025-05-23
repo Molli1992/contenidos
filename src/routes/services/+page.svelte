@@ -1,5 +1,5 @@
 <script lang="ts">
-	import HeroSection from '../../components/HeroSection.svelte';
+import HeroSection from '../../components/HeroSection.svelte';
 
 	const imageUrl =
 		'https://www.brandingmag.com/wp-content/uploads/2023/02/MaorOfek_Image2_1200x676PIXELS.jpg';

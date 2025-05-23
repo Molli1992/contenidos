@@ -4,3 +4,8 @@
 	box-sizing: border-box;
 	font-family: 'Arial';
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
