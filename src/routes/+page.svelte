@@ -3,6 +3,7 @@
 	import heroImg from '../assets/home-img.jpg';
 	import HomeAboutUs from '../components/home/HomeAboutUs.svelte';
 	import HomeServices from '../components/home/HomeServices.svelte';
+	import HomeKeyFeatures from '../components/home/HomeKeyFeatures.svelte';
 
 	const imageUrl = heroImg;
 	const title = 'We move the digital industry forward';
@@ -16,6 +17,8 @@
 	<HomeAboutUs />
 
 	<HomeServices />
+
+	<HomeKeyFeatures />
 </div>
 
 <style>
