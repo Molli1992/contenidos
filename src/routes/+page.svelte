@@ -1,7 +1,7 @@
 <script lang="ts">
 	import HeroSection from '../components/HeroSection.svelte';
 	import heroImg from '../assets/home-img.jpg';
-	import HomeAboutUs from '../components/aboutUs/HomeAboutUs.svelte';
+	import HomeAboutUs from '../components/home/HomeAboutUs.svelte';
 
 	const imageUrl = heroImg;
 	const title = 'We move the digital industry forward';
