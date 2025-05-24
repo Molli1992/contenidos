@@ -2,6 +2,7 @@
 	import HeroSection from '../components/HeroSection.svelte';
 	import heroImg from '../assets/home-img.jpg';
 	import HomeAboutUs from '../components/home/HomeAboutUs.svelte';
+	import HomeServices from '../components/home/HomeServices.svelte';
 
 	const imageUrl = heroImg;
 	const title = 'We move the digital industry forward';
@@ -13,6 +14,8 @@
 	<HeroSection {imageUrl} {title} {description} />
 
 	<HomeAboutUs />
+
+	<HomeServices />
 </div>
 
 <style>
@@ -22,7 +25,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		gap: 75px;
-		padding-bottom: 75px;
+		gap: 100px;
+		padding-bottom: 100px;
 	}
 </style>

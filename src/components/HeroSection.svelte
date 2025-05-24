@@ -4,8 +4,6 @@
 
 	const backgroundGradient: string =
 		'linear-gradient(to bottom, rgba(25, 25, 70, 0.4), rgba(25, 25, 70, 0.4))';
-
-	const duration: number = 800;
 </script>
 
 <div class="hero-section" style="background-image: {backgroundGradient}, url('{imageUrl}');">

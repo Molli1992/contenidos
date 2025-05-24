@@ -1,5 +1,6 @@
 <script lang="ts">
 	import BlueButton from '../../components/BlueButton.svelte';
+	import DashedSeparator from '../DashedSeparator.svelte';
 	import { goto } from '$app/navigation';
 
 	const routeAboutUs = () => {
@@ -10,6 +11,7 @@
 <div class="flex-container">
 	<div class="text-container">
 		<div class="texts">
+			<DashedSeparator />
 			<h1 class="black-title">Seofy Is A Digital Creative Studio</h1>
 
 			<p class="black-text">
@@ -43,7 +45,6 @@
 	.text-container {
 		width: 50%;
 		display: flex;
-		align-items: center;
 		justify-content: center;
 	}
 
