@@ -10,6 +10,15 @@
 
 <div class="body">
 	<HeroSection {imageUrl} {title} {description} />
+
+	<div class="flex-container">
+		<h1>Seofy Is A Digital Creative Studio</h1>
+
+		<p></p>
+		<p></p>
+
+		<button>READ MORE</button>
+	</div>
 </div>
 
 <style>

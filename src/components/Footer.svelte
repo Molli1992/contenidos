@@ -5,6 +5,7 @@
 	import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 	import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 	import Swal from 'sweetalert2';
+	import BlueButton from './BlueButton.svelte';
 
 	let email: string = $state('');
 
@@ -93,7 +94,7 @@
 		<div class="container">
 			<h1>Newsletter</h1>
 			<input placeholder="Enter your email *" class="newsletter-input" bind:value={email} />
-			<button class="newsletter-button" onclick={onSubmit}>SUBSCRIBE</button>
+			<BlueButton value="SUBSCRIBE" onclick={onSubmit} />
 		</div>
 	</div>
 
@@ -173,21 +174,6 @@
 		border: none;
 		border-radius: 5px;
 		font-size: 20px;
-	}
-
-	.newsletter-button {
-		padding: 10px 15px;
-		border: none;
-		border-radius: 5px;
-		font-size: 20px;
-		background-color: blueviolet;
-		color: #ffffff;
-		cursor: pointer;
-	}
-
-	.newsletter-button:hover {
-		background-color: #ffffff;
-		color: blueviolet;
 	}
 
 	.bottom-container {
