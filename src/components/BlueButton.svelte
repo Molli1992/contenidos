@@ -6,6 +6,7 @@
 
 <style>
 	button {
+		width: fit-content;
 		padding: 10px 15px;
 		border: 2px solid transparent;
 		border-radius: 5px;

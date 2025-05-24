@@ -10,6 +10,34 @@ a {
 	text-decoration: none;
 }
 
+.white-title,
+.black-title {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.white-title {
+	color: #ffffff;
+}
+
+.black-title {
+	color: #252525;
+}
+
+.white-subtitle,
+.black-subtitle {
+	font-size: 24px;
+	font-weight: 540;
+}
+
+.white-subtitle {
+	color: #ffffff;
+}
+
+.black-subtitle {
+	color: #252525;
+}
+
 .white-text,
 .black-text {
 	font-size: 18px;
@@ -25,6 +53,17 @@ a {
 }
 
 @media (max-width: 650px) {
+	.white-title,
+	.black-title {
+		font-size: 32px;
+		font-weight: bold;
+	}
+
+	.white-subtitle,
+	.black-subtitle {
+		font-size: 22px;
+	}
+
 	.white-text,
 	.black-text {
 		font-size: 16px;

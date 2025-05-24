@@ -72,7 +72,7 @@
 		</div>
 
 		<div class="container">
-			<h1>Services</h1>
+			<h1 class="white-subtitle">Services</h1>
 			<div>
 				<p class="white-text">Search Engine Marketing</p>
 				<p class="white-text">Search Engine Optimisation</p>
@@ -84,7 +84,7 @@
 		</div>
 
 		<div class="container">
-			<h1>Contacts</h1>
+			<h1 class="white-subtitle">Contacts</h1>
 			<div>
 				<p class="white-text">
 					Adress: 27 Division St, New York, NY. 10002, United States of America.
@@ -97,7 +97,7 @@
 		</div>
 
 		<div class="container">
-			<h1>Newsletter</h1>
+			<h1 class="white-subtitle">Newsletter</h1>
 			<input placeholder="Enter your email *" class="newsletter-input" bind:value={email} />
 			<BlueButton value="SUBSCRIBE" onclick={onSubmit} />
 		</div>
@@ -162,13 +162,11 @@
 	}
 
 	.container h1 {
-		color: #ffffff;
-		font-weight: bold;
-		font-size: 24px;
 		margin-bottom: 20px;
 	}
 
 	.newsletter-input {
+		max-width: 300px;
 		padding: 10px 15px;
 		outline: none;
 		border: none;
