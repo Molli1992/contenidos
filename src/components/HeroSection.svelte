@@ -11,7 +11,7 @@
 <div class="hero-section" style="background-image: {backgroundGradient}, url('{imageUrl}');">
 	<div class="hero-content">
 		<h1>{title}</h1>
-		<p>{description}</p>
+		<p class="white-text">{description}</p>
 
 		<div class="hero-buttons">
 			<a href="https://whatsapp.com/" target="_blank" class="whatsapp button"> WhatsApp </a>
@@ -43,19 +43,11 @@
 		gap: 20px;
 	}
 
-	.hero-content h1,
-	.hero-content p,
-	.hero-buttons {
-		will-change: transform, opacity;
-		transform: translateZ(0);
-	}
-
 	.hero-content h1 {
 		font-size: 48px;
 	}
 
 	.hero-content p {
-		font-size: 18px;
 		width: 700px;
 	}
 
@@ -100,13 +92,9 @@
 		}
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 650px) {
 		.hero-content h1 {
 			font-size: 38px;
-		}
-
-		.hero-content p {
-			font-size: 16px;
 		}
 
 		.button {

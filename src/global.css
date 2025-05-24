@@ -6,6 +6,27 @@
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+	color: inherit;
+	text-decoration: none;
+}
+
+.white-text,
+.black-text {
+	font-size: 18px;
+	line-height: 30px;
+}
+
+.white-text {
+	color: #ffffff;
+}
+
+.black-text {
+	color: #6e6e6e;
+}
+
+@media (max-width: 650px) {
+	.white-text,
+	.black-text {
+		font-size: 16px;
+	}
 }

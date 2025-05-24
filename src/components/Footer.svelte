@@ -50,7 +50,7 @@
 				/>
 			</a>
 
-			<p style="line-height: 30px;">
+			<p class="white-text">
 				Seofy have much planned for the future, working with great clients and continued software
 				development. If you'd like to join our team, then we'd also love to hear from you.
 			</p>
@@ -73,22 +73,27 @@
 
 		<div class="container">
 			<h1>Services</h1>
-			<p>Search Engine Marketing</p>
-			<p>Search Engine Optimisation</p>
-			<p>Pay Per Click</p>
-			<p>Social Media</p>
-			<p>Technical SEO Audit</p>
-			<p>Content Marketing</p>
+			<div>
+				<p class="white-text">Search Engine Marketing</p>
+				<p class="white-text">Search Engine Optimisation</p>
+				<p class="white-text">Pay Per Click</p>
+				<p class="white-text">Social Media</p>
+				<p class="white-text">Technical SEO Audit</p>
+				<p class="white-text">Content Marketing</p>
+			</div>
 		</div>
 
 		<div class="container">
 			<h1>Contacts</h1>
-			<p>Adress: 27 Division St, New York, NY</p>
-			<p>10002, United States of America</p>
-			<p>Website: seofy.com</p>
-			<p>Email: seofy@mail.com</p>
-			<p>Phone: +8 (123) 985 789</p>
-			<p>Fax: +8 (123) 985 788</p>
+			<div>
+				<p class="white-text">
+					Adress: 27 Division St, New York, NY. 10002, United States of America.
+				</p>
+				<p class="white-text">Website: seofy.com</p>
+				<p class="white-text">Email: seofy@mail.com</p>
+				<p class="white-text">Phone: +8 (123) 985 789</p>
+				<p class="white-text">Fax: +8 (123) 985 788</p>
+			</div>
 		</div>
 
 		<div class="container">
@@ -161,11 +166,6 @@
 		font-weight: bold;
 		font-size: 24px;
 		margin-bottom: 20px;
-	}
-
-	.container p {
-		color: #ffffff;
-		font-size: 16px;
 	}
 
 	.newsletter-input {
