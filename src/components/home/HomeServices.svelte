@@ -101,14 +101,12 @@
 
 	@media (max-width: 1175px) {
 		.services-grid {
-			display: grid;
 			grid-template-columns: 1fr 1fr;
 		}
 	}
 
 	@media (max-width: 725px) {
 		.services-grid {
-			display: grid;
 			grid-template-columns: 1fr;
 		}
 	}
