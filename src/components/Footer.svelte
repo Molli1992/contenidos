@@ -6,13 +6,9 @@
 	import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 	import Swal from 'sweetalert2';
 	import BlueButton from './BlueButton.svelte';
+	import { isValidEmail } from '../utils/regexs';
 
 	let email: string = $state('');
-
-	const isValidEmail = (email: string): boolean => {
-		const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		return emailRegex.test(email);
-	};
 
 	const onSubmit = () => {
 		if (!email) {
@@ -30,7 +26,7 @@
 		} else {
 			Swal.fire({
 				title: 'Success!',
-				text: 'You have successfully subscribed',
+				text: 'You have successfully subscribed!',
 				icon: 'success'
 			});
 

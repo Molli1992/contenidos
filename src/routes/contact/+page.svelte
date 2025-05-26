@@ -6,15 +6,40 @@
 	import { faLocationDot, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 	import BlueButton from '../../components/BlueButton.svelte';
 	import Map from '../../components/Map.svelte';
+	import { isValidEmail } from '../../utils/regexs';
+	import Swal from 'sweetalert2';
 
 	const imageUrl = heroImg;
 	const title = "Let's Build Something Great Together";
 	const description =
 		"Ready to start your next digital project? Have questions about our services? Reach out to us today and let's discuss how we can help your business thrive.";
 
+	let emailData = $state({ name: '', email: '', message: '' });
+
 	const onSubmit = (e: SubmitEvent) => {
 		e.preventDefault();
-		console.log('submit');
+
+		if (!emailData.name || !emailData.email || !emailData.message) {
+			Swal.fire({
+				title: 'Info!',
+				text: 'Complete all fields!',
+				icon: 'info'
+			});
+		} else if (!isValidEmail(emailData.email)) {
+			Swal.fire({
+				title: 'Info!',
+				text: 'Please enter a valid email address',
+				icon: 'info'
+			});
+		} else {
+			Swal.fire({
+				title: 'Success!',
+				text: 'Email sent successfully!',
+				icon: 'success'
+			});
+
+			emailData = { name: '', email: '', message: '' };
+		}
 	};
 </script>
 
@@ -80,9 +105,10 @@
 				<h1 class="black-subtitle" style="font-weight: bold;">Drop Us a Line</h1>
 
 				<div class="inputs-container">
-					<input class="input" placeholder="Name *" />
-					<input class="input" placeholder="Email *" />
-					<textarea class="text-area input" placeholder="Message..."></textarea>
+					<input class="input" placeholder="Name *" bind:value={emailData.name} />
+					<input class="input" placeholder="Email *" bind:value={emailData.email} />
+					<textarea class="text-area input" placeholder="Message..." bind:value={emailData.message}
+					></textarea>
 					<BlueButton value="SEND A MESSAGE" />
 				</div>
 			</form>
