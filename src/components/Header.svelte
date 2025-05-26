@@ -2,8 +2,13 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/state';
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
-	import { faBars } from '@fortawesome/free-solid-svg-icons';
-	import { faXmark } from '@fortawesome/free-solid-svg-icons';
+	import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+	import {
+		faWhatsapp,
+		faFacebookF,
+		faInstagram,
+		faLinkedinIn
+	} from '@fortawesome/free-brands-svg-icons';
 
 	let currentPath: string = $derived(page.url.pathname);
 	let scrolled: boolean = $state(false);
@@ -31,9 +36,9 @@
 	};
 </script>
 
-<header class="header" class:scrolled>
+<header class="header" class:scrolled={scrolled || menu}>
 	<a href="/">
-		<img src={scrolled ? logoDark : logoWhite} alt="Company Logo" class="logo" />
+		<img src={scrolled || menu ? logoDark : logoWhite} alt="Company Logo" class="logo" />
 	</a>
 
 	<nav class="center-section">
@@ -89,7 +94,21 @@
 				class:active-link={currentPath === '/contact'}
 				onclick={() => (menu = false)}>Contacts</a
 			>
-			<p>+8 (123) 985 789</p>
+
+			<div class="container-icons">
+				<a href="https://whatsapp.com/" target="_blank" aria-label="WhatsApp" class="icon">
+					<FontAwesomeIcon icon={faWhatsapp} />
+				</a>
+				<a href="https://facebook.com/" target="_blank" aria-label="Facebook" class="icon">
+					<FontAwesomeIcon icon={faFacebookF} />
+				</a>
+				<a href="https://instagram.com/" target="_blank" aria-label="Instagram" class="icon">
+					<FontAwesomeIcon icon={faInstagram} />
+				</a>
+				<a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn" class="icon">
+					<FontAwesomeIcon icon={faLinkedinIn} />
+				</a>
+			</div>
 		</div>
 	{/if}
 </header>
@@ -208,6 +227,29 @@
 
 	.header.scrolled .menu {
 		border-top: 1px solid #000000;
+	}
+
+	.container-icons {
+		width: 100%;
+		display: flex;
+		gap: 15px;
+	}
+
+	.icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		font-size: 20px;
+		background-color: blueviolet;
+		color: #ffffff;
+	}
+
+	.icon:hover {
+		background-color: #ffffff;
+		color: blueviolet;
 	}
 
 	@media (max-width: 975px) {

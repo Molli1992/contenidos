@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
-	import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-	import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
-	import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-	import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+	import {
+		faWhatsapp,
+		faFacebookF,
+		faInstagram,
+		faLinkedinIn
+	} from '@fortawesome/free-brands-svg-icons';
 	import Swal from 'sweetalert2';
 	import BlueButton from './BlueButton.svelte';
 	import { isValidEmail } from '../utils/regexs';
