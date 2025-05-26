@@ -5,6 +5,7 @@
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faLocationDot, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 	import BlueButton from '../../components/BlueButton.svelte';
+	import Map from '../../components/Map.svelte';
 
 	const imageUrl = heroImg;
 	const title = "Let's Build Something Great Together";
@@ -87,6 +88,8 @@
 			</form>
 		</div>
 	</div>
+
+	<Map />
 </div>
 
 <style>
