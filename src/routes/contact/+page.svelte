@@ -5,7 +5,7 @@
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faLocationDot, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 	import BlueButton from '../../components/BlueButton.svelte';
-	import Map from '../../components/Map.svelte';
+	import GoogleMap from '../../components/GoogleMap.svelte';
 	import { isValidEmail } from '../../utils/regexs';
 	import Swal from 'sweetalert2';
 
@@ -115,7 +115,7 @@
 		</div>
 	</div>
 
-	<Map />
+	<GoogleMap />
 </div>
 
 <style>
