@@ -1,6 +1,6 @@
 <script lang="ts">
 	import DashedSeparator from '../../components/DashedSeparator.svelte';
-	import TeamCard from '../../components/TeamCard.svelte';
+	import TeamCard from './TeamCard.svelte';
 
 	const team = [
 		{
