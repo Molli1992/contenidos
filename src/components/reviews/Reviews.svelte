@@ -15,7 +15,7 @@
 		</div>
 
 		<div class="review-container">
-			<Slider />
+			<Slider reviews={true} />
 		</div>
 	</div>
 </div>

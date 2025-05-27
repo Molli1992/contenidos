@@ -2,6 +2,7 @@
 	import HeroSection from '../../components/HeroSection.svelte';
 	import heroImg from '../../assets/services-img.webp';
 	import Service from '../../components/service/Service.svelte';
+	import Project from '../../components/service/Project.svelte';
 
 	const imageUrl = heroImg;
 	const title = 'Your Vision, Our Digital Craftsmanship';
@@ -13,6 +14,8 @@
 	<HeroSection {imageUrl} {title} {description} />
 
 	<Service />
+
+	<Project />
 </div>
 
 <style>
