@@ -1,6 +1,7 @@
 <script lang="ts">
 	import HeroSection from '../../components/HeroSection.svelte';
 	import heroImg from '../../assets/about-us-img.avif';
+	import AboutUs from '../../components/aboutUs/AboutUs.svelte';
 
 	const imageUrl = heroImg;
 	const title = 'Where Creativity Meets Strategic Growth';
@@ -10,11 +11,18 @@
 
 <div class="body">
 	<HeroSection {imageUrl} {title} {description} />
+
+	<AboutUs />
 </div>
 
 <style>
 	.body {
 		width: 100%;
-		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 100px;
+		padding-bottom: 100px;
 	}
 </style>
