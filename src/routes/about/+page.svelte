@@ -2,6 +2,7 @@
 	import HeroSection from '../../components/HeroSection.svelte';
 	import heroImg from '../../assets/about-us-img.avif';
 	import AboutUs from '../../components/aboutUs/AboutUs.svelte';
+	import TimeLine from '../../components/aboutUs/TimeLine.svelte';
 
 	const imageUrl = heroImg;
 	const title = 'Where Creativity Meets Strategic Growth';
@@ -13,6 +14,8 @@
 	<HeroSection {imageUrl} {title} {description} />
 
 	<AboutUs />
+
+	<TimeLine />
 </div>
 
 <style>
