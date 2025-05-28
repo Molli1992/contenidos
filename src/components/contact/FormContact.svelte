@@ -66,7 +66,7 @@
 
 			<div class="sub-column-container">
 				<p class="text">Mail Us:</p>
-				<p class="black-text">seofy@mail.com</p>
+				<p class="black-text">felipe.blaksley@hotmail.com</p>
 			</div>
 		</div>
 
@@ -79,7 +79,7 @@
 
 			<div class="sub-column-container">
 				<p class="text">Phone Us:</p>
-				<p class="black-text">+8 (123) 985 789</p>
+				<p class="black-text">+54 9 112 458 6710</p>
 			</div>
 		</div>
 	</div>

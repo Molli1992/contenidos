@@ -88,10 +88,8 @@
 				<p class="white-text">
 					Adress: 27 Division St, New York, NY. 10002, United States of America.
 				</p>
-				<p class="white-text">Website: seofy.com</p>
-				<p class="white-text">Email: seofy@mail.com</p>
-				<p class="white-text">Phone: +8 (123) 985 789</p>
-				<p class="white-text">Fax: +8 (123) 985 788</p>
+				<p class="white-text">felipe.blaksley@hotmail.com</p>
+				<p class="white-text">+54 9 112 458 6710</p>
 			</div>
 		</div>
 
