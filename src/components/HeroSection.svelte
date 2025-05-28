@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { openWhatsapp, openInstagram } from '../utils/socialNetworks';
+
 	let { imageUrl, title, description }: { imageUrl: string; title: string; description: string } =
 		$props();
 
@@ -12,8 +14,8 @@
 		<p class="white-text">{description}</p>
 
 		<div class="hero-buttons">
-			<a href="https://whatsapp.com/" target="_blank" class="whatsapp button"> WhatsApp </a>
-			<a href="https://instagram.com" target="_blank" class="instagram button"> Instagram </a>
+			<button onclick={openWhatsapp} class="whatsapp button"> WhatsApp </button>
+			<button onclick={openInstagram} class="instagram button"> Instagram </button>
 		</div>
 	</div>
 </div>
@@ -55,6 +57,8 @@
 	}
 
 	.button {
+		all: unset;
+		cursor: pointer;
 		padding: 15px;
 		font-size: 22px;
 		border-radius: 10px;

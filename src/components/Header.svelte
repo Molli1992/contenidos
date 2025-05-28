@@ -9,6 +9,7 @@
 		faInstagram,
 		faLinkedinIn
 	} from '@fortawesome/free-brands-svg-icons';
+	import { openWhatsapp, openInstagram, openFacebook, openLinkedin } from '../utils/socialNetworks';
 
 	let currentPath: string = $derived(page.url.pathname);
 	let scrolled: boolean = $state(false);
@@ -96,18 +97,18 @@
 			>
 
 			<div class="container-icons">
-				<a href="https://whatsapp.com/" target="_blank" aria-label="WhatsApp" class="icon">
+				<button onclick={openWhatsapp}>
 					<FontAwesomeIcon icon={faWhatsapp} />
-				</a>
-				<a href="https://facebook.com/" target="_blank" aria-label="Facebook" class="icon">
+				</button>
+				<button onclick={openFacebook}>
 					<FontAwesomeIcon icon={faFacebookF} />
-				</a>
-				<a href="https://instagram.com/" target="_blank" aria-label="Instagram" class="icon">
+				</button>
+				<button onclick={openInstagram}>
 					<FontAwesomeIcon icon={faInstagram} />
-				</a>
-				<a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn" class="icon">
+				</button>
+				<button onclick={openLinkedin}>
 					<FontAwesomeIcon icon={faLinkedinIn} />
-				</a>
+				</button>
 			</div>
 		</div>
 	{/if}
@@ -235,7 +236,9 @@
 		gap: 15px;
 	}
 
-	.icon {
+	.container-icons button {
+		all: unset;
+		cursor: pointer;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -247,7 +250,7 @@
 		color: #ffffff;
 	}
 
-	.icon:hover {
+	.container-icons button:hover {
 		background-color: #ffffff;
 		color: blueviolet;
 	}

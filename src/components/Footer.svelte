@@ -9,6 +9,7 @@
 	import Swal from 'sweetalert2';
 	import BlueButton from './BlueButton.svelte';
 	import { isValidEmail } from '../utils/regexs';
+	import { openWhatsapp, openInstagram, openFacebook, openLinkedin } from '../utils/socialNetworks';
 
 	let email: string = $state('');
 
@@ -54,18 +55,18 @@
 			</p>
 
 			<div class="container-icons">
-				<a href="https://whatsapp.com/" target="_blank" aria-label="WhatsApp">
+				<button onclick={openWhatsapp}>
 					<FontAwesomeIcon icon={faWhatsapp} />
-				</a>
-				<a href="https://facebook.com/" target="_blank" aria-label="Facebook">
+				</button>
+				<button onclick={openFacebook}>
 					<FontAwesomeIcon icon={faFacebookF} />
-				</a>
-				<a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+				</button>
+				<button onclick={openInstagram}>
 					<FontAwesomeIcon icon={faInstagram} />
-				</a>
-				<a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+				</button>
+				<button onclick={openLinkedin}>
 					<FontAwesomeIcon icon={faLinkedinIn} />
-				</a>
+				</button>
 			</div>
 		</div>
 
@@ -142,7 +143,9 @@
 		gap: 15px;
 	}
 
-	.container-icons a {
+	.container-icons button {
+		all: unset;
+		cursor: pointer;
 		background-color: #ffffff;
 		height: 40px;
 		width: 40px;
@@ -154,7 +157,7 @@
 		font-size: 18px;
 	}
 
-	.container-icons a:hover {
+	.container-icons button:hover {
 		background-color: blueviolet;
 		color: #ffffff;
 	}
