@@ -8,6 +8,8 @@
 		faDesktop
 	} from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
 
 	const services = [
 		{
@@ -53,28 +55,54 @@
 			text: 'Promote through social media algorithms.'
 		}
 	];
-	let selected = services[5];
+
+	let selected = $state(services[5]);
+
+	let show: boolean = $state(false);
+	let circleContainer: HTMLDivElement | null = $state(null);
+
+	onMount(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						show = true;
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				threshold: 0.1
+			}
+		);
+
+		if (circleContainer) observer.observe(circleContainer);
+	});
 </script>
 
 <div class="body">
-	<div class="circle-container">
-		{#each services as service, index}
-			<button
-				class="icon-circle {selected.id === service.id ? 'active' : ''}"
-				style="--i: {index}"
-				on:mouseenter={() => (selected = service)}
-				aria-label={service.title}
-			>
-				<FontAwesomeIcon icon={service.icon} />
-			</button>
-		{/each}
+	{#if show}
+		<div class="circle-container" in:fly={{ y: 350, duration: 1600 }}>
+			{#each services as service, index}
+				<button
+					class="icon-circle {selected.id === service.id ? 'active' : ''}"
+					style="--i: {index}"
+					onmouseenter={() => (selected = service)}
+					aria-label={service.title}
+				>
+					<FontAwesomeIcon icon={service.icon} />
+				</button>
+			{/each}
 
-		<div class="center-content">
-			<p class="category">{selected.media}</p>
-			<h1>{selected.title}</h1>
-			<p>{selected.text}</p>
+			<div class="center-content">
+				<p class="category">{selected.media}</p>
+				<h1>{selected.title}</h1>
+				<p>{selected.text}</p>
+			</div>
 		</div>
-	</div>
+	{:else}
+		<div class="circle-container" bind:this={circleContainer}></div>
+	{/if}
 </div>
 
 <style>
