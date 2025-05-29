@@ -51,7 +51,7 @@
 	</div>
 
 	{#if show}
-		<div class="img-container" in:fly={{ x: 350, duration: 1600 }} bind:this={imgContainer}>
+		<div class="img-container" in:fly={{ y: 350, duration: 1600 }} bind:this={imgContainer}>
 			<div class="img"></div>
 		</div>
 	{:else}

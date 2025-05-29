@@ -23,7 +23,7 @@
 				<h1>{title}</h1>
 			</div>
 
-			<div in:fly={{ x: 100, duration: 600, delay: 200 }}>
+			<div in:fly={{ x: -100, duration: 600, delay: 200 }}>
 				<p class="white-text">{description}</p>
 			</div>
 

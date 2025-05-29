@@ -50,7 +50,7 @@
 		<div
 			class="container"
 			style="align-items: center;"
-			in:fly={{ x: 350, duration: 1600 }}
+			in:fly={{ y: 350, duration: 1600 }}
 			bind:this={imgContainer}
 		>
 			<img
