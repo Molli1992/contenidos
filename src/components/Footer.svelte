@@ -12,6 +12,7 @@
 	import { openWhatsapp, openInstagram, openFacebook, openLinkedin } from '../utils/socialNetworks';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
+	import { afterNavigate } from '$app/navigation';
 
 	let email: string = $state('');
 
@@ -48,8 +49,6 @@
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						show = true;
-					} else {
-						show = false;
 					}
 				});
 			},
@@ -57,6 +56,12 @@
 		);
 
 		if (footerRef) observer.observe(footerRef);
+	});
+
+	onMount(() => {
+		afterNavigate(() => {
+			show = false;
+		});
 	});
 </script>
 
