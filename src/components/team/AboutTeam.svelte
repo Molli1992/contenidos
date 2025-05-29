@@ -1,16 +1,43 @@
 <script lang="ts">
 	import DashedSeparator from '../../components/DashedSeparator.svelte';
 	import SkillBar from '../../components/SkillBar.svelte';
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
+
+	let show: boolean = $state(false);
+	let imgContainer: HTMLDivElement | null = $state(null);
+
+	onMount(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						show = true;
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				threshold: 0.1
+			}
+		);
+
+		if (imgContainer) observer.observe(imgContainer);
+	});
 </script>
 
 <div class="container">
-	<div class="sub-container">
-		<img
-			src="https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/section_our_team_01.png"
-			alt="team-img"
-			class="img"
-		/>
-	</div>
+	{#if show}
+		<div class="sub-container" in:fly={{ x: -350, duration: 1600 }} bind:this={imgContainer}>
+			<img
+				src="https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/section_our_team_01.png"
+				alt="team-img"
+				class="img"
+			/>
+		</div>
+	{:else}
+		<div class="sub-container" bind:this={imgContainer} style="height: 100%;"></div>
+	{/if}
 
 	<div class="sub-container">
 		<DashedSeparator />

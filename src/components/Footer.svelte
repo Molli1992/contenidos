@@ -10,6 +10,8 @@
 	import BlueButton from './BlueButton.svelte';
 	import { isValidEmail } from '../utils/regexs';
 	import { openWhatsapp, openInstagram, openFacebook, openLinkedin } from '../utils/socialNetworks';
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
 
 	let email: string = $state('');
 
@@ -36,18 +38,46 @@
 			email = '';
 		}
 	};
+
+	let show: boolean = $state(false);
+	let footerRef: HTMLDivElement | null = $state(null);
+
+	onMount(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						show = true;
+					} else {
+						show = false;
+					}
+				});
+			},
+			{ threshold: 0.1 }
+		);
+
+		if (footerRef) observer.observe(footerRef);
+	});
 </script>
 
 <footer class="footer">
 	<div class="main-container">
 		<div class="container">
-			<a href="/">
-				<img
-					src="https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/logo-white.png"
-					alt="Company Logo"
-					class="logo"
-				/>
-			</a>
+			<div bind:this={footerRef}>
+				{#if show}
+					<div in:fly={{ x: -200, duration: 1000 }} bind:this={footerRef}>
+						<a href="/">
+							<img
+								src="https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/logo-white.png"
+								alt="Company Logo"
+								class="logo"
+							/>
+						</a>
+					</div>
+				{:else}
+					<div bind:this={footerRef}></div>
+				{/if}
+			</div>
 
 			<p class="white-text">
 				Seofy have much planned for the future, working with great clients and continued software

@@ -2,10 +2,33 @@
 	import DashedSeparator from '../../components/DashedSeparator.svelte';
 	import BlueButton from '../BlueButton.svelte';
 	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
 
 	const routeContact = () => {
 		goto('/contact');
 	};
+
+	let show: boolean = $state(false);
+	let imgContainer: HTMLDivElement | null = $state(null);
+
+	onMount(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						show = true;
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				threshold: 0.1
+			}
+		);
+
+		if (imgContainer) observer.observe(imgContainer);
+	});
 </script>
 
 <div class="body">
@@ -23,13 +46,22 @@
 		<BlueButton value="CONTACT US" onclick={routeContact} />
 	</div>
 
-	<div class="container" style="align-items: center;">
-		<img
-			src="https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/about_us.jpg"
-			alt="about us"
-			class="img"
-		/>
-	</div>
+	{#if show}
+		<div
+			class="container"
+			style="align-items: center;"
+			in:fly={{ x: 350, duration: 1600 }}
+			bind:this={imgContainer}
+		>
+			<img
+				src="https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/about_us.jpg"
+				alt="about us"
+				class="img"
+			/>
+		</div>
+	{:else}
+		<div class="container" bind:this={imgContainer} style="height: 100%;"></div>
+	{/if}
 </div>
 
 <style>

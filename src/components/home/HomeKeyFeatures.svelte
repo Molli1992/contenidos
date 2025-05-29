@@ -3,13 +3,40 @@
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faCheck } from '@fortawesome/free-solid-svg-icons';
 	import PcImg from '../../assets/pc-img.png';
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
+
+	let show: boolean = $state(false);
+	let imgContainer: HTMLDivElement | null = $state(null);
+
+	onMount(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						show = true;
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				threshold: 0.1
+			}
+		);
+
+		if (imgContainer) observer.observe(imgContainer);
+	});
 </script>
 
 <div class="body">
 	<div class="container">
-		<div class="container-img">
-			<img src={PcImg} class="img" alt="pc-img" />
-		</div>
+		{#if show}
+			<div class="container-img" in:fly={{ x: -350, duration: 1600 }} bind:this={imgContainer}>
+				<img src={PcImg} class="img" alt="pc-img" />
+			</div>
+		{:else}
+			<div class="container-img" bind:this={imgContainer} style="height: 100%;"></div>
+		{/if}
 
 		<div class="container-text">
 			<DashedSeparator />
