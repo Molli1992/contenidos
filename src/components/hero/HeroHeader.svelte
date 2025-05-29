@@ -1,14 +1,27 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
+
 	let { route }: { route: string } = $props();
+	let show: boolean = $state(false);
+
+	onMount(() => {
+		show = true;
+	});
 </script>
 
 <div class="body">
-	<h1>{route}</h1>
-	<div class="container">
-		<a href="/">Home</a>
-		<div class="circle"></div>
-		<p>{route}</p>
-	</div>
+	{#if show}
+		<div in:fly={{ y: -50, duration: 600 }}>
+			<h1>{route}</h1>
+		</div>
+
+		<div class="container" in:fly={{ y: 50, duration: 600, delay: 200 }}>
+			<a href="/">Home</a>
+			<div class="circle"></div>
+			<p>{route}</p>
+		</div>
+	{/if}
 </div>
 
 <style>
@@ -26,7 +39,7 @@
 		background-size: cover;
 		background-repeat: no-repeat;
 		color: #252525;
-        text-align: center;
+		text-align: center;
 	}
 
 	.body h1 {

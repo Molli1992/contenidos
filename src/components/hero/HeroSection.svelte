@@ -1,23 +1,38 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { openWhatsapp, openInstagram } from '../../utils/socialNetworks';
+	import { fly } from 'svelte/transition';
 
 	let { imageUrl, title, description }: { imageUrl: string; title: string; description: string } =
 		$props();
 
 	const backgroundGradient: string =
 		'linear-gradient(to bottom, rgba(25, 25, 70, 0.4), rgba(25, 25, 70, 0.4))';
+
+	let show: boolean = $state(false);
+
+	onMount(() => {
+		show = true;
+	});
 </script>
 
 <div class="hero-section" style="background-image: {backgroundGradient}, url('{imageUrl}');">
-	<div class="hero-content">
-		<h1>{title}</h1>
-		<p class="white-text">{description}</p>
+	{#if show}
+		<div class="hero-content">
+			<div in:fly={{ y: -50, duration: 600 }}>
+				<h1>{title}</h1>
+			</div>
 
-		<div class="hero-buttons">
-			<button onclick={openWhatsapp} class="whatsapp button"> WhatsApp </button>
-			<button onclick={openInstagram} class="instagram button"> Instagram </button>
+			<div in:fly={{ x: 100, duration: 600, delay: 200 }}>
+				<p class="white-text">{description}</p>
+			</div>
+
+			<div class="hero-buttons" in:fly={{ y: 50, duration: 600, delay: 400 }}>
+				<button onclick={openWhatsapp} class="whatsapp button"> WhatsApp </button>
+				<button onclick={openInstagram} class="instagram button"> Instagram </button>
+			</div>
 		</div>
-	</div>
+	{/if}
 </div>
 
 <style>
