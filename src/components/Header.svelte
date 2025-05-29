@@ -37,9 +37,13 @@
 	};
 </script>
 
-<header class="header" class:scrolled={scrolled || menu}>
+<header class="header" class:scrolled={scrolled || menu || currentPath !== '/'}>
 	<a href="/">
-		<img src={scrolled || menu ? logoDark : logoWhite} alt="Company Logo" class="logo" />
+		<img
+			src={scrolled || menu || currentPath !== '/' ? logoDark : logoWhite}
+			alt="Company Logo"
+			class="logo"
+		/>
 	</a>
 
 	<nav class="center-section">

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { openWhatsapp, openInstagram } from '../utils/socialNetworks';
+	import { openWhatsapp, openInstagram } from '../../utils/socialNetworks';
 
 	let { imageUrl, title, description }: { imageUrl: string; title: string; description: string } =
 		$props();
