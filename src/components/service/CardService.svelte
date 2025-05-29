@@ -2,9 +2,7 @@
 	let { imageUrl, name, service }: { imageUrl: string; name: string; service: string } = $props();
 </script>
 
-<div class="body">
-	<img src={imageUrl} alt="service-img" class="img" />
-
+<div class="body" style="background-image: url('{imageUrl}');">
 	<div class="container">
 		<h1>{name}</h1>
 		<p>{service}</p>
@@ -16,11 +14,9 @@
 		width: 100%;
 		height: 350px;
 		position: relative;
-	}
-
-	.img {
-		width: 100%;
-		height: 100%;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 
 	.container {
