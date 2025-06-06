@@ -3,7 +3,7 @@
 	import Service from '../../components/service/Service.svelte';
 	import Project from '../../components/service/Project.svelte';
 
-	const route = 'Our Services';
+	const route = 'Servicios';
 </script>
 
 <div class="body">

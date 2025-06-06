@@ -17,7 +17,7 @@
 		</div>
 
 		<div class="container" in:fly={{ y: 50, duration: 600, delay: 200 }}>
-			<a href="/">Home</a>
+			<a href="/">Inicio</a>
 			<div class="circle"></div>
 			<p>{route}</p>
 		</div>

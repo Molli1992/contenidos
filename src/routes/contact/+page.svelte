@@ -3,7 +3,7 @@
 	import GoogleMap from '../../components/contact/GoogleMap.svelte';
 	import FormContact from '../../components/contact/FormContact.svelte';
 
-	const route = 'Contact Us';
+	const route = 'Contacto';
 </script>
 
 <div class="body">

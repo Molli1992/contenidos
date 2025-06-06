@@ -3,7 +3,7 @@
 	import AboutTeam from '../../components/team/AboutTeam.svelte';
 	import TeamMembers from '../../components/team/TeamMembers.svelte';
 
-	const route = 'Our Team';
+	const route = 'Equipo';
 </script>
 
 <div class="body">

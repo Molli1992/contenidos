@@ -3,7 +3,7 @@
 	import AboutUs from '../../components/aboutUs/AboutUs.svelte';
 	import TimeLine from '../../components/aboutUs/TimeLine.svelte';
 
-	const route = 'About Us';
+	const route = 'Nosotros';
 </script>
 
 <div class="body">
