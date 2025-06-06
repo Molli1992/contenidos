@@ -2,7 +2,7 @@
 	import DashedSeparator from '../DashedSeparator.svelte';
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faCheck } from '@fortawesome/free-solid-svg-icons';
-	import PcImg from '../../assets/pc-img.png';
+	import PcImg from '../../assets/images/pc-img.png';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 

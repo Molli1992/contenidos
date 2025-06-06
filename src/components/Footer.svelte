@@ -6,42 +6,16 @@
 		faInstagram,
 		faLinkedinIn
 	} from '@fortawesome/free-brands-svg-icons';
-	import Swal from 'sweetalert2';
-	import BlueButton from './BlueButton.svelte';
-	import { isValidEmail } from '../utils/regexs';
 	import { openWhatsapp, openInstagram, openFacebook, openLinkedin } from '../utils/socialNetworks';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { afterNavigate } from '$app/navigation';
-
-	let email: string = $state('');
-
-	const onSubmit = () => {
-		if (!email) {
-			Swal.fire({
-				title: 'Info!',
-				text: 'Enter your email',
-				icon: 'info'
-			});
-		} else if (!isValidEmail(email)) {
-			Swal.fire({
-				title: 'Info!',
-				text: 'Please enter a valid email address',
-				icon: 'info'
-			});
-		} else {
-			Swal.fire({
-				title: 'Success!',
-				text: 'You have successfully subscribed!',
-				icon: 'success'
-			});
-
-			email = '';
-		}
-	};
+	import Logo from '../assets/logo/logo-contenidos.png';
+	import { page } from '$app/state';
 
 	let show: boolean = $state(false);
 	let footerRef: HTMLDivElement | null = $state(null);
+	let currentPath: string = $derived(page.url.pathname);
 
 	onMount(() => {
 		const observer = new IntersectionObserver(
@@ -72,11 +46,7 @@
 				{#if show}
 					<div in:fly={{ x: -200, duration: 1000 }} bind:this={footerRef}>
 						<a href="/">
-							<img
-								src="https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/logo-white.png"
-								alt="Company Logo"
-								class="logo"
-							/>
+							<img src={Logo} alt="Company Logo" class="logo" />
 						</a>
 					</div>
 				{:else}
@@ -85,8 +55,9 @@
 			</div>
 
 			<p class="white-text">
-				Seofy have much planned for the future, working with great clients and continued software
-				development. If you'd like to join our team, then we'd also love to hear from you.
+				Desde sus inicios con Gerardo Sofovich y con más de dos décadas de trayectoria, Contenidos
+				sigue reinventándose con nuevos formatos y experiencias en entretenimiento, publicidad y
+				medios.
 			</p>
 
 			<div class="container-icons">
@@ -106,32 +77,27 @@
 		</div>
 
 		<div class="container">
-			<h1 class="white-subtitle">Services</h1>
-			<div>
-				<p class="white-text">Search Engine Marketing</p>
-				<p class="white-text">Search Engine Optimisation</p>
-				<p class="white-text">Pay Per Click</p>
-				<p class="white-text">Social Media</p>
-				<p class="white-text">Technical SEO Audit</p>
-				<p class="white-text">Content Marketing</p>
-			</div>
+			<h1 class="white-subtitle">Enlaces</h1>
+			<nav class="center-section">
+				<a href="/" class="nav-link" class:active-link={currentPath === '/'}>Inicio</a>
+				<a href="/about" class="nav-link" class:active-link={currentPath === '/about'}>Nosotros</a>
+				<a href="/services" class="nav-link" class:active-link={currentPath === '/services'}
+					>Servicios</a
+				>
+				<a href="/team" class="nav-link" class:active-link={currentPath === '/team'}>Equipo</a>
+				<a href="/contact" class="nav-link" class:active-link={currentPath === '/contact'}
+					>Contacto</a
+				>
+			</nav>
 		</div>
 
 		<div class="container">
-			<h1 class="white-subtitle">Contacts</h1>
+			<h1 class="white-subtitle">Contacto</h1>
 			<div>
-				<p class="white-text">
-					Adress: 27 Division St, New York, NY. 10002, United States of America.
-				</p>
+				<p class="white-text">27 Division St, New York, NY. 10002, United States of America.</p>
 				<p class="white-text">felipe.blaksley@hotmail.com</p>
 				<p class="white-text">+54 9 112 458 6710</p>
 			</div>
-		</div>
-
-		<div class="container">
-			<h1 class="white-subtitle">Newsletter</h1>
-			<input placeholder="Enter your email *" class="newsletter-input" bind:value={email} />
-			<BlueButton value="SUBSCRIBE" onclick={onSubmit} />
 		</div>
 	</div>
 
@@ -154,9 +120,10 @@
 
 	.main-container {
 		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
 		width: 1200px;
 		padding: 50px 0px;
+		place-items: center;
 		align-items: start;
 	}
 
@@ -164,11 +131,11 @@
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
-		width: 250px;
 	}
 
 	.logo {
-		height: 40px;
+		width: 250px;
+		filter: brightness(1) invert(1);
 	}
 
 	.container-icons {
@@ -196,16 +163,22 @@
 	}
 
 	.container h1 {
-		margin-bottom: 20px;
+		margin-bottom: 5px;
 	}
 
-	.newsletter-input {
-		max-width: 300px;
-		padding: 10px 15px;
-		outline: none;
-		border: none;
-		border-radius: 5px;
-		font-size: 20px;
+	.center-section {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.nav-link {
+		font-size: 18px;
+		color: #ffffff;
+	}
+
+	.active-link {
+		color: gray;
 	}
 
 	.bottom-container {
@@ -215,6 +188,7 @@
 		justify-content: space-between;
 		border-top: 1px solid rgba(150, 150, 150, 0.5);
 		padding: 15px;
+		text-align: center;
 	}
 
 	.bottom-container p {
@@ -227,7 +201,7 @@
 			padding: 0px 75px;
 		}
 		.main-container {
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr;
 			width: 100%;
 			padding: 75px 0px;
 			gap: 50px;
@@ -251,19 +225,10 @@
 
 	@media (max-width: 725px) {
 		.footer {
-			padding: 0px 40px;
+			padding: 0px 30px;
 		}
 		.main-container {
 			padding: 50px 0px;
-		}
-	}
-
-	@media (max-width: 650px) {
-		.footer {
-			padding: 0px 20px;
-		}
-		.main-container {
-			grid-template-columns: 1fr;
 		}
 	}
 </style>

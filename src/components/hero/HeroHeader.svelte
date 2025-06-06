@@ -34,12 +34,13 @@
 		margin-top: 105px;
 		width: 100%;
 		height: 250px;
-		background-image: url('../../assets/page-title.jpg');
+		background-image: url('../../assets/images/page-title.jpg');
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 		color: #252525;
 		text-align: center;
+		margin-top: 105px;
 	}
 
 	.body h1 {

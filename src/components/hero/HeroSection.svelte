@@ -38,13 +38,14 @@
 <style>
 	.hero-section {
 		width: 100%;
-		height: 90vh;
+		height: calc(90vh - 105px);
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;
+		margin-top: 105px;
 	}
 
 	.hero-content {

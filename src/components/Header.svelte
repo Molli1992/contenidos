@@ -10,13 +10,11 @@
 		faLinkedinIn
 	} from '@fortawesome/free-brands-svg-icons';
 	import { openWhatsapp, openInstagram, openFacebook, openLinkedin } from '../utils/socialNetworks';
+	import Logo from '../assets/logo/logo-contenidos.png';
 
 	let currentPath: string = $derived(page.url.pathname);
 	let scrolled: boolean = $state(false);
 	let menu: boolean = $state(false);
-	const logoWhite: string =
-		'https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/logo-white.png';
-	const logoDark: string = 'https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/logo-dark.png';
 
 	onMount(() => {
 		const handleScroll = () => {
@@ -37,22 +35,19 @@
 	};
 </script>
 
-<header class="header" class:scrolled={scrolled || menu || currentPath !== '/'}>
+<header class="header">
 	<a href="/">
-		<img
-			src={scrolled || menu || currentPath !== '/' ? logoDark : logoWhite}
-			alt="Company Logo"
-			class="logo"
-		/>
+		<img src={Logo} alt="Company Logo" class="logo" />
 	</a>
 
 	<nav class="center-section">
-		<a href="/" class="nav-link" class:active-link={currentPath === '/'}>Home</a>
-		<a href="/about" class="nav-link" class:active-link={currentPath === '/about'}>About us</a>
-		<a href="/services" class="nav-link" class:active-link={currentPath === '/services'}>Services</a
+		<a href="/" class="nav-link" class:active-link={currentPath === '/'}>Inicio</a>
+		<a href="/about" class="nav-link" class:active-link={currentPath === '/about'}>Nosotros</a>
+		<a href="/services" class="nav-link" class:active-link={currentPath === '/services'}
+			>Servicios</a
 		>
-		<a href="/team" class="nav-link" class:active-link={currentPath === '/team'}>Team</a>
-		<a href="/contact" class="nav-link" class:active-link={currentPath === '/contact'}>Contacts</a>
+		<a href="/team" class="nav-link" class:active-link={currentPath === '/team'}>Equipo</a>
+		<a href="/contact" class="nav-link" class:active-link={currentPath === '/contact'}>Contacto</a>
 	</nav>
 
 	<div class="right-section">
@@ -73,31 +68,31 @@
 				href="/"
 				class="nav-link"
 				class:active-link={currentPath === '/'}
-				onclick={() => (menu = false)}>Home</a
+				onclick={() => (menu = false)}>Inicio</a
 			>
 			<a
 				href="/about"
 				class="nav-link"
 				class:active-link={currentPath === '/about'}
-				onclick={() => (menu = false)}>About us</a
+				onclick={() => (menu = false)}>Nosotros</a
 			>
 			<a
 				href="/services"
 				class="nav-link"
 				class:active-link={currentPath === '/services'}
-				onclick={() => (menu = false)}>Services</a
+				onclick={() => (menu = false)}>Servicios</a
 			>
 			<a
 				href="/team"
 				class="nav-link"
 				class:active-link={currentPath === '/team'}
-				onclick={() => (menu = false)}>Team</a
+				onclick={() => (menu = false)}>Equipo</a
 			>
 			<a
 				href="/contact"
 				class="nav-link"
 				class:active-link={currentPath === '/contact'}
-				onclick={() => (menu = false)}>Contacts</a
+				onclick={() => (menu = false)}>Contacto</a
 			>
 
 			<div class="container-icons">
@@ -129,11 +124,6 @@
 		justify-content: space-between;
 		padding: 25px 50px;
 		z-index: 9999;
-		background-color: transparent;
-		border-bottom: 1px solid #ffffff;
-	}
-
-	.scrolled {
 		background-color: #ffffff;
 		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 		border-bottom: none;
@@ -154,13 +144,10 @@
 		gap: 40px;
 	}
 
-	.header.scrolled .center-section {
-		color: #000000;
-	}
-
 	.nav-link {
 		font-size: 16px;
 		position: relative;
+		color: #000000;
 	}
 
 	.nav-link::after {
@@ -170,7 +157,7 @@
 		left: 0;
 		width: 0;
 		height: 3px;
-		background-color: #ffffff;
+		background-color: #000000;
 		transition: width 0.3s ease-out;
 	}
 
@@ -180,18 +167,11 @@
 
 	.nav-link.active-link::after {
 		width: 100%;
-	}
-
-	.header.scrolled .nav-link::after {
 		background-color: #000000;
 	}
 
 	.right-section {
-		border-left: 1px solid #ffffff;
 		padding-left: 20px;
-	}
-
-	.header.scrolled .right-section {
 		color: #000000;
 		border-left: 1px solid #000000;
 	}
@@ -205,12 +185,8 @@
 		cursor: pointer;
 		background-color: transparent;
 		border: none;
-		color: #ffffff;
-		font-size: 42px;
-	}
-
-	.header.scrolled .menu-toggle {
 		color: #000000;
+		font-size: 42px;
 	}
 
 	.menu {
@@ -228,9 +204,6 @@
 		color: #000000;
 		font-weight: bold;
 		font-size: 16px;
-	}
-
-	.header.scrolled .menu {
 		border-top: 1px solid #000000;
 	}
 
