@@ -1,6 +1,5 @@
 <script lang="ts">
 	import HeroHeader from '../../components/hero/HeroHeader.svelte';
-	import GoogleMap from '../../components/contact/GoogleMap.svelte';
 	import FormContact from '../../components/contact/FormContact.svelte';
 
 	const route = 'Contacto';
@@ -10,8 +9,6 @@
 	<HeroHeader {route} />
 
 	<FormContact />
-
-	<GoogleMap />
 </div>
 
 <style>

@@ -14,19 +14,19 @@
 		if (!emailData.name || !emailData.email || !emailData.message) {
 			Swal.fire({
 				title: 'Info!',
-				text: 'Complete all fields!',
+				text: 'Completar todos los campos!',
 				icon: 'info'
 			});
 		} else if (!isValidEmail(emailData.email)) {
 			Swal.fire({
 				title: 'Info!',
-				text: 'Please enter a valid email address',
+				text: 'Ingresar un email valido',
 				icon: 'info'
 			});
 		} else {
 			Swal.fire({
-				title: 'Success!',
-				text: 'Email sent successfully!',
+				title: 'Exito!',
+				text: 'Email enviado exitosamente!',
 				icon: 'success'
 			});
 
@@ -38,10 +38,10 @@
 <div class="container">
 	<div class="column-container">
 		<DashedSeparator />
-		<h1 class="black-title">Get in Touch</h1>
+		<h1 class="black-title">Contactanos</h1>
 		<p class="black-text">
-			Seofy is a USA search engine marketing agency, that deliver digital marketing strategies to
-			companies worldwide. Contact us today to find out how we can help you.
+			Contenidos es una productora con historia en televisión, teatro y eventos. Fundada por Gerardo
+			Sofovich, seguimos creando propuestas que marcan la cultura y el entretenimiento Argentino.
 		</p>
 
 		<div class="flex-container">
@@ -91,14 +91,14 @@
 				onSubmit(e);
 			}}
 		>
-			<h1 class="black-subtitle" style="font-weight: bold;">Drop Us a Line</h1>
+			<h1 class="black-subtitle" style="font-weight: bold;">Dejanos tu mensaje</h1>
 
 			<div class="inputs-container">
-				<input class="input" placeholder="Name *" bind:value={emailData.name} />
+				<input class="input" placeholder="Nombre *" bind:value={emailData.name} />
 				<input class="input" placeholder="Email *" bind:value={emailData.email} />
-				<textarea class="text-area input" placeholder="Message..." bind:value={emailData.message}
+				<textarea class="text-area input" placeholder="Mensaje..." bind:value={emailData.message}
 				></textarea>
-				<BlueButton value="SEND A MESSAGE" />
+				<BlueButton value="Enviar Mensaje" />
 			</div>
 		</form>
 	</div>
