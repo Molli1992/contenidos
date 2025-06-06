@@ -7,10 +7,11 @@
 <div class="body">
 	<div class="container">
 		<DashedSeparator />
-		<h1 class="black-title">The Story of Seofy</h1>
+		<h1 class="black-title">La historia de Contenidos</h1>
 		<p class="black-text">
-			We enjoy adapting our strategies to offer every client the best solutions that are at the
-			forefront of the industry.
+			En Contenidos nos dedicamos a la producción, realización y comercialización de espectáculos,
+			televisión y eventos. Con más de 25 años de historia, combinamos tradición e innovación para
+			ofrecer experiencias inolvidables en medios, teatro, cine y entretenimiento en vivo.
 		</p>
 	</div>
 

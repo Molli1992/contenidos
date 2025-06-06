@@ -41,7 +41,7 @@
 			vía pública en lugares estratégicos de CABA.
 		</p>
 
-		<BlueButton value="CONTACT US" onclick={routeContact} />
+		<BlueButton value="CONTACTO" onclick={routeContact} />
 	</div>
 
 	{#if show}

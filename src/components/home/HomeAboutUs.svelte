@@ -49,7 +49,7 @@
 				redonda, Las minas de Salomón Rey, Me sobra un marido y Camarero nocturno en Mar del Plata.
 			</p>
 
-			<BlueButton value="READ MORE" onclick={routeAboutUs} />
+			<BlueButton value="LEER MAS" onclick={routeAboutUs} />
 		</div>
 	</div>
 
