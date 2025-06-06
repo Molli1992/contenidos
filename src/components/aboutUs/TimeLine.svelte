@@ -1,44 +1,7 @@
 <script lang="ts">
 	import DashedSeparator from '../../components/DashedSeparator.svelte';
 	import CardTimeLine from './CardTimeLine.svelte';
-
-	const events = [
-		{
-			title: 'A Brief History',
-			description: 'We joined the team and after much success, the agency was eventually...',
-			year: '2021',
-			color: '#f7a400',
-			side: 'left'
-		},
-		{
-			title: 'Something Big',
-			description: 'The team move into its first office, in the centre of Henley-on-Thames.',
-			year: '2022',
-			color: '#ff6600',
-			side: 'right'
-		},
-		{
-			title: 'The Army Grows',
-			description: 'The team of Seofy grow to around 8, as amazing new clients come on board.',
-			year: '2023',
-			color: '#00d5d3',
-			side: 'left'
-		},
-		{
-			title: 'An Award-Winning Creation',
-			description: 'Continued growth in cool new clients means that our team continues.',
-			year: '2024',
-			color: '#1493ff',
-			side: 'right'
-		},
-		{
-			title: 'Expansion & Awards',
-			description: 'The team grows to nearly 40, working with some incredible clients.',
-			year: '2025',
-			color: '#3f49d9',
-			side: 'left'
-		}
-	];
+	import { dataEvents } from '../../data/dataEvents';
 </script>
 
 <div class="body">
@@ -53,7 +16,7 @@
 
 	<div class="line"></div>
 
-	{#each events as event}
+	{#each dataEvents as event}
 		<CardTimeLine
 			title={event.title}
 			description={event.description}

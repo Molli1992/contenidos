@@ -34,15 +34,13 @@
 <div class="body">
 	<div class="container">
 		<DashedSeparator />
-		<h1 class="black-title">The #1 SEO Services Company</h1>
+		<h1 class="black-title">El legado de Sofovich, reinventado en lo digital</h1>
 		<p class="black-text">
-			We are an experienced and talented team of passionate consultants who live and breathe search
-			engine.
+			Contenidos se dedica a la producción, realización y comercialización de espectáculos. También
+			ofrecemos servicios de publicidad en todos los medios y contamos con Pantallas LED propias de
+			vía pública en lugares estratégicos de CABA.
 		</p>
-		<p class="black-text">
-			We have developed search strategies for leading brands to small and medium sized businesses
-			across many industries in the UK and worldwide.
-		</p>
+
 		<BlueButton value="CONTACT US" onclick={routeContact} />
 	</div>
 

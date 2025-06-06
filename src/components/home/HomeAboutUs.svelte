@@ -35,15 +35,18 @@
 	<div class="text-container">
 		<div class="texts">
 			<DashedSeparator />
-			<h1 class="black-title">Seofy Is A Digital Creative Studio</h1>
+			<h1 class="black-title">Creatividad, espectáculo y legado en la escena digital</h1>
 
 			<p class="black-text">
-				We specialize in brand identities, campaigns, social strategy & content creation,
-				commercials, websites.
+				Contenidos es una empresa creada por Gerardo Sofovich. En el teatro rompió récords de
+				recaudación en calle Corrientes, en Mar del Plata y en Villa Carlos Paz. “El champán las
+				pone mimosas” —estrenada en los años '70 y reversionada durante este siglo— es su carta de
+				presentación ineludible.
 			</p>
 			<p class="black-text">
-				We are artists, designers, engineers, thinkers and learners, builders and dreamers hell bent
-				on building the best damn digital products possible for our clients.
+				También supo llevar sus éxitos televisivos, como Operación Ja Ja, Polémica en el bar y La
+				Noche del Domingo. En el cine, produjo clásicos de la comedia como Los caballeros de la cama
+				redonda, Las minas de Salomón Rey, Me sobra un marido y Camarero nocturno en Mar del Plata.
 			</p>
 
 			<BlueButton value="READ MORE" onclick={routeAboutUs} />
