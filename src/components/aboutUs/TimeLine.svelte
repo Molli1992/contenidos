@@ -9,9 +9,8 @@
 		<DashedSeparator />
 		<h1 class="black-title">La historia de Contenidos</h1>
 		<p class="black-text">
-			En Contenidos nos dedicamos a la producción, realización y comercialización de espectáculos,
-			televisión y eventos. Con más de 25 años de historia, combinamos tradición e innovación para
-			ofrecer experiencias inolvidables en medios, teatro, cine y entretenimiento en vivo.
+			Con más de 25 años de historia, combinamos tradición e innovación para ofrecer experiencias
+			inolvidables en medios, teatro, cine y entretenimiento en vivo.
 		</p>
 	</div>
 
@@ -61,7 +60,7 @@
 		border-bottom-right-radius: 50%;
 		position: absolute;
 		left: 50%;
-		top: 240px;
+		top: 220px;
 		background-color: #e2e8f0;
 		transform: translateX(-50%);
 	}
