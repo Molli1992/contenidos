@@ -1,6 +1,6 @@
 <script lang="ts">
 	import HeroSection from '../components/hero/HeroSection.svelte';
-	import heroImg from '../assets/images/home-img.jpg';
+	import heroImg from '../assets/images/hero/hero-header.jpg';
 	import HomeAboutUs from '../components/home/HomeAboutUs.svelte';
 	import HomeServices from '../components/home/HomeServices.svelte';
 	import HomeKeyFeatures from '../components/home/HomeKeyFeatures.svelte';

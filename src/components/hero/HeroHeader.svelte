@@ -34,7 +34,7 @@
 		margin-top: 105px;
 		width: 100%;
 		height: 250px;
-		background-image: url('../../assets/images/page-title.jpg');
+		background-image: url('../../assets/images/hero/hero-header.jpg');
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
