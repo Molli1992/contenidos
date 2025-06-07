@@ -94,8 +94,8 @@
 	}
 	.img {
 		height: 100%;
-		width: 100%;
-		background-image: url('https://wgl-dsites.net/seofy/wp-content/uploads/2019/05/it_agency_layer_1.jpg');
+		width: 500px;
+		background-image: url('../../assets/images/home/home-gerardo-1.jpg');
 		background-position: center;
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -107,7 +107,7 @@
 		}
 	}
 
-	@media (max-width: 950px) {
+	@media (max-width: 1000px) {
 		.flex-container {
 			flex-direction: column;
 		}
@@ -125,15 +125,17 @@
 			width: 100%;
 			height: 400px;
 		}
-
-		.img {
-			width: 500px;
-		}
 	}
 
 	@media (max-width: 600px) {
 		.img {
 			width: 100%;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.img-container {
+			height: 300px;
 		}
 	}
 </style>

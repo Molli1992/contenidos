@@ -8,9 +8,9 @@
 	import Reviews from '../components/reviews/Reviews.svelte';
 
 	const imageUrl = heroImg;
-	const title = 'We move the digital industry forward';
+	const title = 'Llevamos el entretenimiento y la comunicación al siguiente nivel';
 	const description =
-		'We specialize in brand identities, campaigns, social strategies & content creation, commercials, websites, apps, books, environment, and more.';
+		'Con décadas de experiencia en la producción y realización de espectáculos, desarrollamos contenidos audiovisuales y campañas publicitarias para todos los medios.';
 </script>
 
 <div class="body">

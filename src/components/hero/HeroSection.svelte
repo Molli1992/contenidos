@@ -61,10 +61,13 @@
 
 	.hero-content h1 {
 		font-size: 48px;
+		width: 100%;
+		max-width: 1200px;
 	}
 
 	.hero-content p {
-		width: 700px;
+		width: 100%;
+		max-width: 700px;
 	}
 
 	.hero-buttons {
@@ -104,15 +107,13 @@
 		border-color: #833ab4;
 	}
 
-	@media (max-width: 735px) {
-		.hero-content p {
-			width: 100%;
-		}
-	}
-
-	@media (max-width: 650px) {
+	@media (max-width: 700px) {
 		.hero-content h1 {
 			font-size: 38px;
+		}
+
+		.hero-content p {
+			font-size: 16px;
 		}
 
 		.button {
