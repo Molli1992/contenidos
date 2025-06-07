@@ -54,19 +54,19 @@
 
 	.line {
 		width: 4px;
-		height: 860px;
+		height: 92%;
 		border-top-left-radius: 50%;
 		border-top-right-radius: 50%;
 		border-bottom-left-radius: 50%;
 		border-bottom-right-radius: 50%;
 		position: absolute;
 		left: 50%;
-		top: 180px;
+		top: 240px;
 		background-color: #e2e8f0;
 		transform: translateX(-50%);
 	}
 
-	@media (max-width: 950px) {
+	@media (max-width: 650px) {
 		.line {
 			display: none;
 		}

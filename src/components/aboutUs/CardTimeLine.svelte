@@ -50,7 +50,8 @@
 		padding: 20px;
 		border-radius: 5px;
 		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-		width: 400px;
+		max-width: 400px;
+		width: 100%;
 	}
 
 	.card h1 {
@@ -77,16 +78,9 @@
 		color: var(--border-color);
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 650px) {
 		.card {
 			width: 300px;
-		}
-	}
-
-	@media (max-width: 500px) {
-		.card {
-			width: 250px;
-			padding: 15px;
 		}
 
 		.card h1 {
@@ -102,7 +96,7 @@
 		.hex {
 			width: 18px;
 			height: 18px;
-			margin: 0px 25px;
+			margin: 0px 22px;
 		}
 
 		.year h1 {
@@ -110,13 +104,25 @@
 		}
 	}
 
-	@media (max-width: 425px) {
+	@media (max-width: 500px) {
 		.card {
 			width: 225px;
 		}
 
 		.hex {
 			margin: 0px 18px;
+		}
+	}
+
+	@media (max-width: 430px) {
+		.card {
+			width: 200px;
+		}
+	}
+
+	@media (max-width: 390px) {
+		.card {
+			width: 175px;
 		}
 	}
 </style>
