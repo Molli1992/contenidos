@@ -51,11 +51,7 @@
 			in:fly={{ y: 350, duration: 1600 }}
 			bind:this={imgContainer}
 		>
-			<img
-				src="https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/about_us.jpg"
-				alt="about us"
-				class="img"
-			/>
+			<div class="img"></div>
 		</div>
 	{:else}
 		<div class="container" bind:this={imgContainer} style="height: 100%;"></div>
@@ -79,11 +75,15 @@
 	}
 
 	.img {
-		width: 450px;
+		width: 500px;
 		height: 450px;
+		background-image: url('../../assets/images/aboutUs/img-nosotros-1.jpg');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 
-	@media (max-width: 950px) {
+	@media (max-width: 975px) {
 		.body {
 			flex-direction: column;
 			align-items: center;
@@ -96,10 +96,22 @@
 		}
 	}
 
-	@media (max-width: 525px) {
+	@media (max-width: 650px) {
+		.body {
+			padding: 0px 15px;
+		}
+	}
+
+	@media (max-width: 550px) {
 		.img {
 			width: 100%;
-			height: auto;
+			height: 350px;
+		}
+	}
+
+	@media (max-width: 425px) {
+		.img {
+			height: 325px;
 		}
 	}
 </style>

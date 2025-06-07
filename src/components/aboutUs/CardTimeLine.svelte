@@ -80,7 +80,7 @@
 
 	@media (max-width: 650px) {
 		.card {
-			width: 300px;
+			width: 350px;
 		}
 
 		.card h1 {
@@ -104,9 +104,9 @@
 		}
 	}
 
-	@media (max-width: 500px) {
+	@media (max-width: 525px) {
 		.card {
-			width: 225px;
+			width: 300px;
 		}
 
 		.hex {
@@ -114,15 +114,15 @@
 		}
 	}
 
-	@media (max-width: 430px) {
+	@media (max-width: 450px) {
 		.card {
-			width: 200px;
+			width: 250px;
 		}
 	}
 
-	@media (max-width: 390px) {
+	@media (max-width: 395px) {
 		.card {
-			width: 175px;
+			width: 225px;
 		}
 	}
 </style>

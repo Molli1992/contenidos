@@ -70,5 +70,9 @@
 		.line {
 			display: none;
 		}
+
+		.body {
+			padding: 0px 15px;
+		}
 	}
 </style>
