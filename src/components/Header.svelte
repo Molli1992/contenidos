@@ -51,7 +51,7 @@
 	</nav>
 
 	<div class="right-section">
-		<p>+8 (123) 985 789</p>
+		<p>+54 9 11 2458-6710</p>
 	</div>
 
 	<button class="menu-toggle" onclick={toggleMenu}>
@@ -232,13 +232,13 @@
 		color: blueviolet;
 	}
 
-	@media (max-width: 975px) {
+	@media (max-width: 1050px) {
 		.header {
 			padding: 25px;
 		}
 	}
 
-	@media (max-width: 925px) {
+	@media (max-width: 990px) {
 		.center-section {
 			display: none;
 		}
