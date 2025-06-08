@@ -14,45 +14,45 @@
 	const services = [
 		{
 			id: 1,
-			media: 'Marketing',
-			icon: faTag,
-			title: 'Audience Engagement',
-			text: 'Marketing strategies tailored to your audience.'
+			media: 'Producción',
+			icon: faDesktop,
+			title: 'Producción Integral',
+			text: 'Desarrollamos proyectos para teatro, TV, cine y eventos en vivo.'
 		},
 		{
 			id: 2,
-			media: 'SEO',
-			icon: faGlobe,
-			title: 'Search Visibility',
-			text: 'Improve your visibility with our SEO solutions.'
+			media: 'Publicidad',
+			icon: faTag,
+			title: 'Publicidad Multicanal',
+			text: 'Campañas en medios tradicionales, digitales y pantallas LED propias.'
 		},
 		{
 			id: 3,
-			media: 'Analytics',
-			icon: faChartLine,
-			title: 'Data Intelligence',
-			text: 'Track your performance in real-time.'
+			media: 'Eventos',
+			icon: faRocket,
+			title: 'Organización de Eventos',
+			text: 'Gestión y producción de espectáculos y festivales a gran escala.'
 		},
 		{
 			id: 4,
-			media: 'Launch',
-			icon: faRocket,
-			title: 'Product Growth',
-			text: 'Product launches made easy and efficient.'
+			media: 'Televisión',
+			icon: faGlobe,
+			title: 'Producción Televisiva',
+			text: 'Creación de programas icónicos con impacto nacional.'
 		},
 		{
 			id: 5,
-			media: 'Automation',
-			icon: faCog,
-			title: 'Workflow Efficiency',
-			text: 'Automate workflows to save time.'
+			media: 'Teatro',
+			icon: faChartLine,
+			title: 'Éxitos Teatrales',
+			text: 'Obras premiadas y récords de recaudación en las principales plazas del país.'
 		},
 		{
 			id: 6,
-			media: 'Media',
-			icon: faDesktop,
-			title: 'Digital Outreach',
-			text: 'Promote through social media algorithms.'
+			media: 'Música',
+			icon: faCog,
+			title: 'Eventos Musicales',
+			text: 'Coproducción de shows y festivales con artistas internacionales.'
 		}
 	];
 

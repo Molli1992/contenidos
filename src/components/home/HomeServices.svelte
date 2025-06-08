@@ -2,50 +2,51 @@
 	import DashedSeparator from '../DashedSeparator.svelte';
 	import HomeServicesCard from './HomeServicesCard.svelte';
 	import {
-		faChartSimple,
-		faGear,
-		faBullseye,
-		faChartPie,
-		faVideo,
-		faBoxesStacked
+		faTv,
+		faBullhorn,
+		faTicketAlt,
+		faTheaterMasks,
+		faMusic,
+		faVideo
 	} from '@fortawesome/free-solid-svg-icons';
 
 	const arrayServices = [
 		{
-			icon: faChartSimple,
-			title: 'Strategy',
+			id: 1,
+			icon: faTv,
+			title: 'Producción de Contenidos',
 			description:
-				"We analyse your website's structure, internal architecture & other key elements that are weighted."
+				'Diseñamos y producimos formatos originales para TV, plataformas y medios digitales.'
 		},
 		{
-			icon: faGear,
-			title: 'Development',
-			description:
-				'At this stage we have all designs approved. Our main focus is to create secure & clean code.'
+			id: 2,
+			icon: faBullhorn,
+			title: 'Publicidad Exterior',
+			description: 'Difundí tu marca en pantallas LED ubicadas estratégicamente en CABA.'
 		},
 		{
-			icon: faBullseye,
-			title: 'Branding & Design',
-			description:
-				'We start from structuring information architecture and mapping out functionalities (UX).'
+			id: 3,
+			icon: faTicketAlt,
+			title: 'Gestión de Espectáculos',
+			description: 'Planificamos y ejecutamos shows, giras y temporadas teatrales con alto impacto.'
 		},
 		{
-			icon: faChartPie,
-			title: 'Social & Content',
-			description:
-				'Our team of creatives, designers & developers work alongside our SEO & content teams to ideate.'
+			id: 4,
+			icon: faTheaterMasks,
+			title: 'Producción Escénica',
+			description: 'Desde el guión hasta el escenario: realizamos obras teatrales que marcan época.'
 		},
 		{
+			id: 5,
+			icon: faMusic,
+			title: 'Festivales y Música',
+			description: 'Organizamos eventos musicales y coproducciones con artistas de renombre.'
+		},
+		{
+			id: 6,
 			icon: faVideo,
-			title: 'Video & Motion Graphics',
-			description:
-				'While the search engines are still in their infancy in understanding & using social signals algorithmically.'
-		},
-		{
-			icon: faBoxesStacked,
-			title: 'Studio & Production',
-			description:
-				'We love data and provide monthly reporting on visibility, analytics, conversions & revenue.'
+			title: 'Desarrollo Audiovisual',
+			description: 'Transformamos ideas en piezas audiovisuales de calidad profesional.'
 		}
 	];
 </script>
@@ -53,9 +54,10 @@
 <div class="body">
 	<DashedSeparator />
 	<div class="container-title">
-		<h1 class="black-title">What We Offer You</h1>
+		<h1 class="black-title">Lo Que Hacemos en Contenidos</h1>
 		<p class="black-text">
-			We help create succsessfull digital products, for any screen and for ever imagenably user
+			Creamos experiencias inolvidables en teatro, televisión, cine y eventos. Ofrecemos soluciones
+			integrales que combinan creatividad, técnica y producción para cada proyecto.
 		</p>
 	</div>
 
@@ -88,6 +90,11 @@
 		justify-content: center;
 		gap: 10px;
 		text-align: center;
+	}
+
+	.container-title p {
+		width: 100%;
+		max-width: 800px;
 	}
 
 	.services-grid {

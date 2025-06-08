@@ -6,11 +6,11 @@
 <div class="body">
 	<div class="container">
 		<DashedSeparator />
-		<h1 class="black-title">Enjoy Our Amazing Projects</h1>
+		<h1 class="black-title">Disfrutá Nuestros Proyectos Destacados</h1>
 		<p class="black-text">
-			View some of our work and case studies for clients. We will work to deliver that strategy by
-			building out your existing campaigns, or establishing accounts at new networks. It’s important
-			to us that you own the accounts, and that you have a relationship with the network owners.
+			Te invitamos a conocer algunas de nuestras producciones más emblemáticas en teatro,
+			televisión, cine y eventos. En Contenidos trabajamos con pasión para hacer realidad cada idea,
+			aportando creatividad, experiencia y compromiso en cada proyecto.
 		</p>
 	</div>
 

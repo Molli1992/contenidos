@@ -8,19 +8,20 @@
 <div class="body">
 	<div class="container">
 		<DashedSeparator />
-		<h1 class="black-title">How Search Engine Marketing Team Can Help</h1>
+		<h1 class="black-title">Cómo Contenidos Potencia Tus Proyectos</h1>
 		<p class="black-text">
-			Seofy stays ahead of the curve with digital marketing trends. Our success has us leading the
-			pack amongst our competitors with our ability to anticipate change and innovation.
+			Con décadas de experiencia en entretenimiento, publicidad y producción de eventos, en
+			Contenidos anticipamos tendencias y transformamos ideas en espectáculos memorables. Nuestra
+			innovación y compromiso nos posicionan como referentes en la industria.
 		</p>
 
 		<div>
 			<div class="icon">
-				<h1 class="number">1200</h1>
+				<h1 class="number">500</h1>
 				<FontAwesomeIcon icon={faPlus} />
 			</div>
 
-			<p class="black-text" style="font-weight: bold;">HAPPY CLIENTS</p>
+			<p class="black-text" style="font-weight: bold;">CLIENTES SATISFECHOS</p>
 		</div>
 	</div>
 
@@ -60,7 +61,7 @@
 		.body {
 			flex-direction: column;
 			gap: 75px;
-            align-items: center;
+			align-items: center;
 		}
 
 		.container {
