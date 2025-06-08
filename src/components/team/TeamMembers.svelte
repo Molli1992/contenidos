@@ -1,5 +1,28 @@
 <script lang="ts">
 	import DashedSeparator from '../../components/DashedSeparator.svelte';
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
+
+	let show: boolean = $state(false);
+	let imgContainer: HTMLDivElement | null = $state(null);
+
+	onMount(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						show = true;
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{
+				threshold: 0.1
+			}
+		);
+
+		if (imgContainer) observer.observe(imgContainer);
+	});
 </script>
 
 <div
@@ -17,7 +40,15 @@
 		</p>
 	</div>
 
-	<div class="img-container"></div>
+	{#if show}
+		<div class="img-container" in:fly={{ y: 350, duration: 1600 }} bind:this={imgContainer}>
+			<div class="img"></div>
+		</div>
+	{:else}
+		<div class="img-container" bind:this={imgContainer} style="height: 100%;">
+			<div class="img"></div>
+		</div>
+	{/if}
 </div>
 
 <style>
@@ -41,6 +72,11 @@
 	.img-container {
 		width: 100%;
 		height: 600px;
+	}
+
+	.img {
+		width: 100%;
+		height: 100%;
 		background-image: url('../../assets/images/team/img-team-2.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
