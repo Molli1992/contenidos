@@ -1,26 +1,26 @@
 <script lang="ts">
 	import DashedSeparator from '../DashedSeparator.svelte';
 	import CardFeatures from './CardFeatures.svelte';
-	import { faMagnifyingGlass, faRocket, faKey } from '@fortawesome/free-solid-svg-icons'; // Importa los nuevos iconos
+	import { faMagnifyingGlass, faRocket, faKey } from '@fortawesome/free-solid-svg-icons';
 
 	const arrayFeatures = [
 		{
 			icon: faMagnifyingGlass,
-			title: 'Branding',
+			title: 'Estrategia de Contenidos',
 			description:
-				'If you need branding, we will create a consistent visual identification of your service.'
+				'Analizamos tu mercado y público para definir mensajes claros y efectivos que posicionen tu marca.'
 		},
 		{
 			icon: faRocket,
-			title: 'Web Design',
+			title: 'Producción Multimedia',
 			description:
-				'We start from structuring information architecture and mapping out functionalities (UX).'
+				'Creamos videos, podcasts y materiales visuales que capturan la atención y comunican con impacto.'
 		},
 		{
 			icon: faKey,
-			title: 'Development',
+			title: 'Optimización y Difusión',
 			description:
-				'At this stage we have all designs approved. Our main focus is to create secure & clean code.'
+				'Implementamos técnicas para maximizar el alcance y la interacción en plataformas digitales y redes sociales.'
 		}
 	];
 </script>
@@ -28,10 +28,10 @@
 <div class="body">
 	<DashedSeparator />
 	<div class="container-title">
-		<h1 class="black-title">Our Best Features</h1>
+		<h1 class="black-title">Nuestras Principales Fortalezas</h1>
 		<p class="black-text">
-			We help create succsessfull digital products, for any screenand for ever imagenably user and
-			many iteresting things for us
+			Te ayudamos a crear contenidos estratégicos y creativos que conectan con tu audiencia y
+			potencian tu marca en todos los canales.
 		</p>
 	</div>
 
@@ -72,10 +72,16 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		place-items: center;
-		gap: 50px;
+		gap: 25px;
 	}
 
-	@media (max-width: 1225px) {
+	@media (max-width: 1000px) {
+		.services-grid {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media (max-width: 700px) {
 		.services-grid {
 			grid-template-columns: 1fr;
 		}

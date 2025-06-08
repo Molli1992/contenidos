@@ -24,7 +24,8 @@
 		justify-content: center;
 		text-align: center;
 		height: 400px;
-		width: 350px;
+		width: 100%;
+		max-width: 400px;
 		background-color: #f5f5f5;
 		gap: 30px;
 		padding: 0px 25px;
