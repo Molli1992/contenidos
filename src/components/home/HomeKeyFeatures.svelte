@@ -2,7 +2,6 @@
 	import DashedSeparator from '../DashedSeparator.svelte';
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faCheck } from '@fortawesome/free-solid-svg-icons';
-	import PcImg from '../../assets/images/pc-img.png';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 
@@ -32,7 +31,7 @@
 	<div class="container">
 		{#if show}
 			<div class="container-img" in:fly={{ x: -350, duration: 1600 }} bind:this={imgContainer}>
-				<img src={PcImg} class="img" alt="pc-img" />
+				<div class="img"></div>
 			</div>
 		{:else}
 			<div class="container-img" bind:this={imgContainer} style="height: 100%;"></div>
@@ -41,9 +40,10 @@
 		<div class="container-text">
 			<DashedSeparator />
 
-			<h1 class="white-title">We Design For Preferred Futures</h1>
+			<h1 class="white-title">Creamos Experiencias Memorables</h1>
 			<p class="white-text">
-				Our services extend to every aspect of the project development process
+				Nos involucramos en cada etapa del proceso creativo para lograr resultados únicos y
+				alineados con tu visión.
 			</p>
 
 			<div class="icon-container">
@@ -52,8 +52,8 @@
 				</div>
 
 				<p class="white-text">
-					We immerse ourselves in the analytics of your business, in order to study all the
-					subtleties and determine target.
+					Nos sumergimos en el análisis de tu audiencia para diseñar propuestas que conecten
+					emocionalmente.
 				</p>
 			</div>
 
@@ -63,7 +63,7 @@
 				</div>
 
 				<p class="white-text">
-					We know how to create complex and intuitive interface systems that are enjoyable to use.
+					Desarrollamos contenidos que cuentan historias con identidad, impacto y valor cultural.
 				</p>
 			</div>
 
@@ -73,8 +73,7 @@
 				</div>
 
 				<p class="white-text">
-					Our developer team easily subdue developments of any complexity. We dominate all the cycle
-					of development.
+					Combinamos arte, tecnología y estrategia para abordar proyectos desde una mirada integral.
 				</p>
 			</div>
 		</div>
@@ -108,7 +107,11 @@
 
 	.img {
 		width: 100%;
-		height: 375px;
+		height: 425px;
+		background-image: url('../../assets/images/home/home-features-img.JPG');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 
 	.container-text {
@@ -166,7 +169,7 @@
 
 	@media (max-width: 500px) {
 		.img {
-			height: 275px;
+			height: 325px;
 		}
 	}
 </style>
