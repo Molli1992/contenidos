@@ -75,25 +75,12 @@
 		<div class="flex-container">
 			<div class="icon">
 				<div>
-					<FontAwesomeIcon icon={faLocationDot} />
-				</div>
-			</div>
-
-			<div class="sub-column-container">
-				<p class="text">Visit Us:</p>
-				<p class="black-text">27 Division St, New York, NY 10002, USA</p>
-			</div>
-		</div>
-
-		<div class="flex-container">
-			<div class="icon">
-				<div>
 					<FontAwesomeIcon icon={faEnvelope} />
 				</div>
 			</div>
 
 			<div class="sub-column-container">
-				<p class="text">Mail Us:</p>
+				<p class="text">Email:</p>
 				<p class="black-text">felipe.blaksley@hotmail.com</p>
 			</div>
 		</div>
@@ -106,8 +93,8 @@
 			</div>
 
 			<div class="sub-column-container">
-				<p class="text">Phone Us:</p>
-				<p class="black-text">+54 9 112 458 6710</p>
+				<p class="text">Telefono:</p>
+				<p class="black-text">+54 9 11 2458-6710</p>
 			</div>
 		</div>
 	</div>

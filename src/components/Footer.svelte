@@ -94,16 +94,15 @@
 		<div class="container">
 			<h1 class="white-subtitle">Contacto</h1>
 			<div>
-				<p class="white-text">27 Division St, New York, NY. 10002, United States of America.</p>
 				<p class="white-text">felipe.blaksley@hotmail.com</p>
-				<p class="white-text">+54 9 112 458 6710</p>
+				<p class="white-text">+54 9 11 2458-6710</p>
 			</div>
 		</div>
 	</div>
 
 	<div class="bottom-container">
-		<p>Terms of use | Privacy Environmental Policy</p>
-		<p>Copyright © 2025 Seofy all Rights Reserved.</p>
+		<p>Términos de uso | Política de Privacidad y Medio Ambiente</p>
+		<p>Copyright © 2025 Contenidos. Todos los derechos reservados.</p>
 	</div>
 </footer>
 
@@ -216,7 +215,7 @@
 		}
 	}
 
-	@media (max-width: 825px) {
+	@media (max-width: 1025px) {
 		.bottom-container {
 			flex-direction: column;
 			gap: 10px;

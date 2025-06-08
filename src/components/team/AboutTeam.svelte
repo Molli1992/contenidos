@@ -29,11 +29,7 @@
 <div class="container">
 	{#if show}
 		<div class="sub-container" in:fly={{ x: -350, duration: 1600 }} bind:this={imgContainer}>
-			<img
-				src="https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/section_our_team_01.png"
-				alt="team-img"
-				class="img"
-			/>
+			<div class="img"></div>
 		</div>
 	{:else}
 		<div class="sub-container" bind:this={imgContainer} style="height: 100%;"></div>
@@ -41,28 +37,28 @@
 
 	<div class="sub-container">
 		<DashedSeparator />
-		<h1 class="black-title">Skilled Team of Creators</h1>
+		<h1 class="black-title">Nuestro Equipo y Experiencia</h1>
 		<p class="black-text">
-			From dedicated SEO strategists to creative web designers, we have the people who can plan and
-			execute the right plan for your company.
+			Contamos con un equipo de creativos, productores y profesionales dedicados a planificar y
+			ejecutar proyectos que conectan con el público y potencian la visibilidad de marcas y eventos.
 		</p>
 
 		<div class="skillbar-container">
 			<SkillBar
-				label="SEO"
-				percentage={70}
+				label="Producción de Espectáculos"
+				percentage={90}
 				gradient="linear-gradient(to right, #facc15, #f97316)"
 			/>
 
 			<SkillBar
-				label="SMM"
-				percentage={93}
+				label="Publicidad y Medios"
+				percentage={85}
 				gradient="linear-gradient(to right, #60a5fa, #1e3a8a)"
 			/>
 
 			<SkillBar
-				label="PPC"
-				percentage={53}
+				label="Gestión de Eventos"
+				percentage={80}
 				gradient="linear-gradient(to right, #67e8f9, #3b82f6)"
 			/>
 		</div>
@@ -88,9 +84,10 @@
 	.img {
 		width: 100%;
 		height: 500px;
-		background-color: #f5f5f5;
-		padding: 20px;
-		border-radius: 20px;
+		background-image: url('../../assets/images/team/img-team-1.jpg');
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 
 	.skillbar-container {

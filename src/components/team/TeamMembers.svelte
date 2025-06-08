@@ -1,49 +1,5 @@
 <script lang="ts">
 	import DashedSeparator from '../../components/DashedSeparator.svelte';
-	import TeamCard from './TeamCard.svelte';
-
-	const team = [
-		{
-			img: 'https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/team_1-420x460.jpg',
-			name: 'Mark Liuw',
-			role: 'General Manager'
-		},
-		{
-			img: 'https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/team_2-420x460.jpg',
-			name: 'Angela Kwang',
-			role: 'Chief Operating Officer'
-		},
-		{
-			img: 'https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/team_3-420x460.jpg',
-			name: 'Nina Sherwood',
-			role: 'Senior Digital Strategist'
-		},
-		{
-			img: 'https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/team_4-420x460.jpg',
-			name: 'Cherlyn Long',
-			role: 'Managing Director'
-		},
-		{
-			img: 'https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/team_5-420x460.jpg',
-			name: 'Amy Cutter',
-			role: 'Head of Technical SEO'
-		},
-		{
-			img: 'https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/team_6-420x460.jpg',
-			name: 'Mark Porter',
-			role: 'Head of Content'
-		},
-		{
-			img: 'https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/team_7-420x460.jpg',
-			name: 'Matt Hopson',
-			role: 'Senior SEM Manager'
-		},
-		{
-			img: 'https://wgl-dsites.net/seofy/wp-content/uploads/2018/11/team_8-420x460.jpg',
-			name: 'Laura Brady',
-			role: 'SEO Consultant'
-		}
-	];
 </script>
 
 <div
@@ -52,18 +8,16 @@
 >
 	<div class="title-container">
 		<DashedSeparator />
-		<h1 class="black-title">Our Executive Team</h1>
+		<h1 class="black-title">Trabajamos juntos</h1>
 		<p class="black-text">
-			Our success is a result of teamwork and building upon our technical expertise and creative
-			style providing a full-service solution to our clients.
+			El motor detrás de nuestros éxitos es un equipo comprometido con la creatividad, la
+			experiencia y la pasión por el entretenimiento. Juntos, combinamos talento y profesionalismo
+			para llevar adelante proyectos innovadores y de alto impacto en teatro, televisión, cine y
+			publicidad.
 		</p>
 	</div>
 
-	<div class="grid-container">
-		{#each team as team (team.name)}
-			<TeamCard img={team.img} name={team.name} role={team.role} />
-		{/each}
-	</div>
+	<div class="img-container"></div>
 </div>
 
 <style>
@@ -72,7 +26,6 @@
 		max-width: 1200px;
 		padding: 0px 25px;
 		display: flex;
-		gap: 50px;
 	}
 
 	.title-container {
@@ -85,30 +38,18 @@
 		gap: 25px;
 	}
 
-	.grid-container {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		place-items: center;
-		gap: 25px;
+	.img-container {
+		width: 100%;
+		height: 600px;
+		background-image: url('../../assets/images/team/img-team-2.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 
-	@media (max-width: 1225px) {
-		.grid-container {
-			grid-template-columns: 1fr 1fr 1fr;
-		}
-	}
-
-	@media (max-width: 925px) {
-		.grid-container {
-			grid-template-columns: 1fr 1fr;
-		}
-	}
-
-	@media (max-width: 900px) {
-		.container {
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
+	@media (max-width: 920px) {
+		.img-container {
+			height: 400px;
 		}
 	}
 
@@ -118,9 +59,15 @@
 		}
 	}
 
-	@media (max-width: 625px) {
-		.grid-container {
-			grid-template-columns: 1fr;
+	@media (max-width: 635px) {
+		.img-container {
+			height: 300px;
+		}
+	}
+
+	@media (max-width: 495px) {
+		.img-container {
+			height: 225px;
 		}
 	}
 </style>
