@@ -63,7 +63,7 @@
 	};
 </script>
 
-<div class="container">
+<section class="container">
 	<div class="column-container">
 		<DashedSeparator />
 		<h1 class="black-title">Contactanos</h1>
@@ -123,7 +123,7 @@
 			</div>
 		</form>
 	</div>
-</div>
+</section>
 
 <style>
 	.container {

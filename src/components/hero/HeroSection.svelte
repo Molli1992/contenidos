@@ -16,7 +16,7 @@
 	});
 </script>
 
-<div class="hero-section" style="background-image: {backgroundGradient}, url('{imageUrl}');">
+<section class="hero-section" style="background-image: {backgroundGradient}, url('{imageUrl}');">
 	{#if show}
 		<div class="hero-content">
 			<div in:fly={{ y: -50, duration: 600 }}>
@@ -33,7 +33,7 @@
 			</div>
 		</div>
 	{/if}
-</div>
+</section>
 
 <style>
 	.hero-section {

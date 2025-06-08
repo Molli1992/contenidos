@@ -6,13 +6,13 @@
 	const route = 'Nosotros';
 </script>
 
-<div class="body">
+<main class="body">
 	<HeroHeader {route} />
 
 	<AboutUs />
 
 	<TimeLine />
-</div>
+</main>
 
 <style>
 	.body {

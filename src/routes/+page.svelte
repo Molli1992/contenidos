@@ -13,7 +13,7 @@
 		'Con décadas de experiencia en la producción y realización de espectáculos, desarrollamos contenidos audiovisuales y campañas publicitarias para todos los medios.';
 </script>
 
-<div class="body">
+<main class="body">
 	<HeroSection {imageUrl} {title} {description} />
 
 	<HomeAboutUs />
@@ -25,7 +25,7 @@
 	<Features />
 
 	<Reviews />
-</div>
+</main>
 
 <style>
 	.body {

@@ -5,7 +5,7 @@
 	import CircleServices from './CircleServices.svelte';
 </script>
 
-<div class="body">
+<section class="body">
 	<div class="container">
 		<DashedSeparator />
 		<h1 class="black-title">Cómo Contenidos Potencia Tus Proyectos</h1>
@@ -28,7 +28,7 @@
 	<div class="container">
 		<CircleServices />
 	</div>
-</div>
+</section>
 
 <style>
 	.body {

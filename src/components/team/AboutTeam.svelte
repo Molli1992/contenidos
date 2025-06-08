@@ -26,7 +26,7 @@
 	});
 </script>
 
-<div class="container">
+<section class="container">
 	{#if show}
 		<div class="sub-container" in:fly={{ x: -350, duration: 1600 }} bind:this={imgContainer}>
 			<div class="img"></div>
@@ -65,7 +65,7 @@
 			/>
 		</div>
 	</div>
-</div>
+</section>
 
 <style>
 	.container {

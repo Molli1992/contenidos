@@ -25,7 +25,7 @@
 	});
 </script>
 
-<div
+<section
 	class="container"
 	style="flex-direction: column; align-items: center; justify-content: center;"
 >
@@ -49,7 +49,7 @@
 			<div class="img"></div>
 		</div>
 	{/if}
-</div>
+</section>
 
 <style>
 	.container {

@@ -10,7 +10,7 @@
 	});
 </script>
 
-<div class="body">
+<section class="body">
 	{#if show}
 		<div in:fly={{ y: -50, duration: 600 }}>
 			<h1>{route}</h1>
@@ -22,7 +22,7 @@
 			<p>{route}</p>
 		</div>
 	{/if}
-</div>
+</section>
 
 <style>
 	.body {

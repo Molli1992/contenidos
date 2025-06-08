@@ -6,13 +6,13 @@
 	const route = 'Servicios';
 </script>
 
-<div class="body">
+<main class="body">
 	<HeroHeader {route} />
 
 	<Service />
 
 	<Project />
-</div>
+</main>
 
 <style>
 	.body {

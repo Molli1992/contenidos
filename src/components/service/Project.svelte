@@ -3,7 +3,7 @@
 	import Slider from '../Slider.svelte';
 </script>
 
-<div class="body">
+<section class="body">
 	<div class="container">
 		<DashedSeparator />
 		<h1 class="black-title">Disfrutá Nuestros Proyectos Destacados</h1>
@@ -17,7 +17,7 @@
 	<div class="container">
 		<Slider projects={true} />
 	</div>
-</div>
+</section>
 
 <style>
 	.body {

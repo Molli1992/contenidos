@@ -4,7 +4,7 @@
 	import { dataEvents } from '../../data/dataEvents';
 </script>
 
-<div class="body">
+<section class="body">
 	<div class="container">
 		<DashedSeparator />
 		<h1 class="black-title">La historia de Contenidos</h1>
@@ -25,7 +25,7 @@
 			side={event.side}
 		/>
 	{/each}
-</div>
+</section>
 
 <style>
 	.body {

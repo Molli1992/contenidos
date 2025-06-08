@@ -27,7 +27,7 @@
 	});
 </script>
 
-<div class="body">
+<section class="body">
 	<div class="container">
 		{#if show}
 			<div class="container-img" in:fly={{ x: -350, duration: 1600 }} bind:this={imgContainer}>
@@ -80,7 +80,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
 <style>
 	.body {

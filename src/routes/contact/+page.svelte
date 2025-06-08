@@ -5,11 +5,11 @@
 	const route = 'Contacto';
 </script>
 
-<div class="body">
+<main class="body">
 	<HeroHeader {route} />
 
 	<FormContact />
-</div>
+</main>
 
 <style>
 	.body {

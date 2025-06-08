@@ -6,13 +6,13 @@
 	const route = 'Equipo';
 </script>
 
-<div class="body">
+<main class="body">
 	<HeroHeader {route} />
 
 	<AboutTeam />
 
 	<TeamMembers />
-</div>
+</main>
 
 <style>
 	.body {

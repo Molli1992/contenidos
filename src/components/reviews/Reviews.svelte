@@ -3,7 +3,7 @@
 	import Slider from '../Slider.svelte';
 </script>
 
-<div class="body">
+<section class="body">
 	<div class="container">
 		<div class="text-container">
 			<DashedSeparator />
@@ -19,7 +19,7 @@
 			<Slider reviews={true} />
 		</div>
 	</div>
-</div>
+</section>
 
 <style>
 	.body {

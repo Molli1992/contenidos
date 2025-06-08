@@ -51,7 +51,7 @@
 	];
 </script>
 
-<div class="body">
+<section class="body">
 	<DashedSeparator />
 	<div class="container-title">
 		<h1 class="black-title">Lo Que Hacemos en Contenidos</h1>
@@ -70,7 +70,7 @@
 			/>
 		{/each}
 	</div>
-</div>
+</section>
 
 <style>
 	.body {

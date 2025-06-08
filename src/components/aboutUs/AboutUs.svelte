@@ -31,7 +31,7 @@
 	});
 </script>
 
-<div class="body">
+<section class="body">
 	<div class="container">
 		<DashedSeparator />
 		<h1 class="black-title">El legado de Sofovich, reinventado en lo digital</h1>
@@ -58,7 +58,7 @@
 			<div class="img" style="background-image: url('')"></div>
 		</div>
 	{/if}
-</div>
+</section>
 
 <style>
 	.body {

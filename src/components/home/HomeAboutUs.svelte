@@ -31,7 +31,7 @@
 	});
 </script>
 
-<div class="flex-container">
+<section class="flex-container">
 	<div class="text-container">
 		<div class="texts">
 			<DashedSeparator />
@@ -60,7 +60,7 @@
 	{:else}
 		<div class="img-container" bind:this={imgContainer} style="height: 100%;"></div>
 	{/if}
-</div>
+</section>
 
 <style>
 	.flex-container {
