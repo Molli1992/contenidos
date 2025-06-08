@@ -54,7 +54,9 @@
 			<div class="img"></div>
 		</div>
 	{:else}
-		<div class="container" bind:this={imgContainer} style="height: 100%;"></div>
+		<div class="container" bind:this={imgContainer} style="height: 100%;">
+			<div class="img" style="background-image: url('')"></div>
+		</div>
 	{/if}
 </div>
 

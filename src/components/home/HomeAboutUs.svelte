@@ -89,12 +89,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		height: 450px;
+		height: 500px;
 		width: 50%;
 	}
 	.img {
 		height: 100%;
-		width: 500px;
+		width: 100%;
+		max-width: 600px;
 		background-image: url('../../assets/images/home/home-gerardo-1.jpg');
 		background-position: center;
 		background-size: cover;
@@ -126,13 +127,6 @@
 			height: 400px;
 		}
 	}
-
-	@media (max-width: 600px) {
-		.img {
-			width: 100%;
-		}
-	}
-
 	@media (max-width: 480px) {
 		.img-container {
 			height: 300px;
