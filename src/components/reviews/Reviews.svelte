@@ -7,10 +7,11 @@
 	<div class="container">
 		<div class="text-container">
 			<DashedSeparator />
-			<h1 class="black-title">What Clients Say About Us</h1>
+			<h1 class="black-title">Lo Que Dicen de Nosotros</h1>
 			<p class="black-text">
-				Seofy`s clients and their results are the best proof that our methodologies work. But we’ve
-				also received numerous awards and praise from the media and our peers.
+				El reconocimiento del público, los medios y nuestros colaboradores avalan el trabajo de
+				Contenidos a lo largo de los años. Nuestra historia se construye con cada espectáculo,
+				programa y evento que deja huella.
 			</p>
 		</div>
 

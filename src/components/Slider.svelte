@@ -16,45 +16,87 @@
 	const reviewsData = [
 		{
 			id: 1,
-			name: 'Mira Peterson',
-			company: 'Marketing Manager',
+			name: 'Carolina Méndez',
+			role: 'Productora audiovisual',
 			review:
-				'“Working with Seofy has been a turning point for our digital strategy. Their results-driven approach and ability to adapt to our specific needs allowed us to exceed our traffic and conversion goals in record time. Highly recommended!”'
+				'“Trabajar con Contenidos marcó un antes y un después en nuestras producciones. Supieron interpretar nuestra visión y llevarla a escena con profesionalismo y creatividad. Totalmente recomendables.”'
 		},
 		{
 			id: 2,
-			name: 'Ronald Dunkan',
-			company: 'Global Commerce',
+			name: 'Esteban Rodríguez',
+			role: 'Organizador de eventos',
 			review:
-				"“We've seen exponential growth in our online sales since Seofy took over our SEO. Their team is highly professional, transparent, and always willing to go the extra mile. An investment that definitely paid off.”"
+				'“La experiencia fue impecable. Desde la planificación hasta la ejecución técnica, Contenidos nos brindó un acompañamiento constante y resultados que superaron nuestras expectativas.”'
 		},
 		{
 			id: 3,
-			name: 'Dina Olson',
-			company: 'Digital Art Studios',
+			name: 'Lucía Fernández',
+			role: 'Periodista cultural',
 			review:
-				'“Seofy not only helped us improve our ranking but also provided a clear vision of how to optimize our online presence. Their constant communication and detailed reports gave us great confidence in the process. Excellent service!”'
+				'“Contenidos demuestra un compromiso auténtico con el arte y la cultura. La calidad de sus producciones es sobresaliente, y siempre logran generar un impacto positivo en el público.”'
 		},
 		{
 			id: 4,
-			name: 'Michael Davis',
-			company: 'Express Logistics',
+			name: 'Matías Gómez',
+			role: 'Director teatral',
 			review:
-				'“The experience with Seofy has been exceptional. They provided innovative and customized solutions that resulted in a significant increase in our search engine visibility. Their market knowledge is undeniable.”'
+				'“Su equipo técnico y artístico tiene una mirada integral que facilita todo el proceso creativo. Con Contenidos, cada detalle está cuidado, y eso se nota en el resultado final.”'
 		},
 		{
 			id: 5,
-			name: 'Sarah Johnson',
-			company: 'Active Life Blog',
+			name: 'Mariana López',
+			role: 'Gestora cultural',
 			review:
-				"“As a content creator, Seofy's keyword strategy and technical audit were fundamental for our blog to reach a much wider audience. Their technical support and clarity in their explanations are a great value.”"
+				'“Gracias a Contenidos pudimos llevar adelante un festival de gran escala sin inconvenientes. Se destacan por su organización, respuesta rápida y capacidad de adaptación.”'
 		},
 		{
 			id: 6,
-			name: 'David Miller',
-			company: 'Homemade Delights',
+			name: 'Santiago Paredes',
+			role: 'Músico independiente',
 			review:
-				'“At first, we were skeptical about SEO for a local business, but Seofy proved it works. Thanks to them, more customers are finding our bakery through Google. Their work is methodical, and the results are tangible.”'
+				'“Confié en Contenidos para la producción de mi show y fue la mejor decisión. Supieron potenciar mi propuesta artística y cuidar cada aspecto del evento. ¡Excelente trato y resultados!”'
+		},
+		{
+			id: 7,
+			name: 'Florencia Ibáñez',
+			role: 'Directora de arte',
+			review:
+				'“Fue un placer trabajar con un equipo tan comprometido y creativo. Entendieron rápidamente nuestras necesidades visuales y entregaron materiales de altísima calidad.”'
+		},
+		{
+			id: 8,
+			name: 'Julián Cabrera',
+			role: 'Empresario del entretenimiento',
+			review:
+				'“He trabajado con muchas productoras, pero pocas tienen la capacidad de resolución que tiene Contenidos. Siempre ofrecen soluciones prácticas sin perder nivel.”'
+		},
+		{
+			id: 9,
+			name: 'Natalia Duarte',
+			role: 'Productora de televisión',
+			review:
+				'“Contenidos es sinónimo de confianza. Su experiencia en TV se nota desde la primera reunión. Cumplen con los tiempos y elevan el estándar de cualquier producción.”'
+		},
+		{
+			id: 10,
+			name: 'Tomás Vega',
+			role: 'Iluminador escénico',
+			review:
+				'“Siempre que trabajamos con Contenidos nos sentimos respaldados. Su logística y soporte técnico hacen que todo funcione como reloj. Un equipo sólido.”'
+		},
+		{
+			id: 11,
+			name: 'Rocío Morales',
+			role: 'Actriz y docente',
+			review:
+				'“Participé en varias producciones con Contenidos y siempre valoré el respeto por el artista. Cuidan cada instancia del proceso y fomentan un ambiente creativo.”'
+		},
+		{
+			id: 12,
+			name: 'Federico Torres',
+			role: 'Técnico de sonido',
+			review:
+				'“La coordinación con el equipo de Contenidos fue excelente. Todo estaba previsto y claro desde el inicio. Da gusto trabajar con profesionales así.”'
 		}
 	];
 
@@ -185,7 +227,7 @@
 		{#if reviews}
 			{#each reviewsData as review}
 				<div class="swiper-slide">
-					<CardReviews name={review.name} company={review.company} review={review.review} />
+					<CardReviews name={review.name} role={review.role} review={review.review} />
 				</div>
 			{/each}
 		{:else if projects}

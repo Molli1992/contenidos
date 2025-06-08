@@ -2,14 +2,14 @@
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
-	let { name, company, review }: { name: string; company: string; review: string } = $props();
+	let { name, role, review }: { name: string; role: string; review: string } = $props();
 </script>
 
 <div class="body">
 	<div class="container">
 		<div class="container-text">
 			<h1 class="title">{name}</h1>
-			<p class="text">{company}</p>
+			<p class="text">{role}</p>
 		</div>
 
 		<div class="icon">
