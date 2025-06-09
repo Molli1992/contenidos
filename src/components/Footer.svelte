@@ -10,7 +10,7 @@
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { afterNavigate } from '$app/navigation';
-	import Logo from '../assets/logo/logo-contenidos.png';
+	import Logo from '../assets/logo/logo-contenidos-sin-fondo.png';
 	import { page } from '$app/state';
 
 	let show: boolean = $state(false);
