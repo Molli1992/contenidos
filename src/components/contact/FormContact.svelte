@@ -6,6 +6,8 @@
 	import { isValidEmail } from '../../utils/regexs';
 	import Swal from 'sweetalert2';
 	import { RingLoader } from 'svelte-loading-spinners';
+	import { faWhatsapp, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+	import { openWhatsapp, openInstagram, openYouTube } from '../../utils/socialNetworks';
 
 	let emailData = $state({ name: '', email: '', phone: '', message: '' });
 	let loader: boolean = $state(false);
@@ -97,6 +99,18 @@
 				<p class="black-text">+54 9 11 2458-6710</p>
 			</div>
 		</div>
+
+		<div class="container-icons">
+			<button onclick={openWhatsapp}>
+				<FontAwesomeIcon icon={faWhatsapp} />
+			</button>
+			<button onclick={openInstagram}>
+				<FontAwesomeIcon icon={faInstagram} />
+			</button>
+			<button onclick={openYouTube}>
+				<FontAwesomeIcon icon={faYoutube} />
+			</button>
+		</div>
 	</div>
 
 	<div class="column-container">
@@ -145,6 +159,31 @@
 		display: flex;
 		align-items: center;
 		gap: 25px;
+	}
+
+	.container-icons {
+		width: 100%;
+		display: flex;
+		gap: 15px;
+	}
+
+	.container-icons button {
+		all: unset;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		font-size: 20px;
+		background-color: blueviolet;
+		color: #ffffff;
+	}
+
+	.container-icons button:hover {
+		background-color: #ffffff;
+		color: blueviolet;
 	}
 
 	.icon {

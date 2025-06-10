@@ -3,13 +3,8 @@
 	import { page } from '$app/state';
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-	import {
-		faWhatsapp,
-		faFacebookF,
-		faInstagram,
-		faLinkedinIn
-	} from '@fortawesome/free-brands-svg-icons';
-	import { openWhatsapp, openInstagram, openFacebook, openLinkedin } from '../utils/socialNetworks';
+	import { faWhatsapp, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+	import { openWhatsapp, openInstagram, openYouTube } from '../utils/socialNetworks';
 	import Logo from '../assets/logo/logo-contenidos.png';
 
 	let currentPath: string = $derived(page.url.pathname);
@@ -110,14 +105,11 @@
 				<button onclick={openWhatsapp}>
 					<FontAwesomeIcon icon={faWhatsapp} />
 				</button>
-				<button onclick={openFacebook}>
-					<FontAwesomeIcon icon={faFacebookF} />
-				</button>
 				<button onclick={openInstagram}>
 					<FontAwesomeIcon icon={faInstagram} />
 				</button>
-				<button onclick={openLinkedin}>
-					<FontAwesomeIcon icon={faLinkedinIn} />
+				<button onclick={openYouTube}>
+					<FontAwesomeIcon icon={faYoutube} />
 				</button>
 			</div>
 		</div>

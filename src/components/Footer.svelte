@@ -2,11 +2,10 @@
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import {
 		faWhatsapp,
-		faFacebookF,
 		faInstagram,
-		faLinkedinIn
+		faYoutube
 	} from '@fortawesome/free-brands-svg-icons';
-	import { openWhatsapp, openInstagram, openFacebook, openLinkedin } from '../utils/socialNetworks';
+	import { openWhatsapp, openInstagram,  openYouTube } from '../utils/socialNetworks';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { afterNavigate } from '$app/navigation';
@@ -64,14 +63,11 @@
 				<button onclick={openWhatsapp}>
 					<FontAwesomeIcon icon={faWhatsapp} />
 				</button>
-				<button onclick={openFacebook}>
-					<FontAwesomeIcon icon={faFacebookF} />
-				</button>
 				<button onclick={openInstagram}>
 					<FontAwesomeIcon icon={faInstagram} />
 				</button>
-				<button onclick={openLinkedin}>
-					<FontAwesomeIcon icon={faLinkedinIn} />
+				<button onclick={openYouTube}>
+					<FontAwesomeIcon icon={faYoutube} />
 				</button>
 			</div>
 		</div>
