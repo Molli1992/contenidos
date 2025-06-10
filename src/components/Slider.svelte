@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Swiper from 'swiper/bundle';
-	import { Pagination, Navigation } from 'swiper/modules'; // Import Navigation
+	import { Pagination, Navigation } from 'swiper/modules';
 	import 'swiper/css';
 	import 'swiper/css/pagination';
-	import 'swiper/css/navigation'; // Import navigation CSS
+	import 'swiper/css/navigation';
 	import CardReviews from './reviews/CardReviews.svelte';
 	import CardService from './service/CardService.svelte';
 	import CardProducciones from './producciones/CardProducciones.svelte';
@@ -184,39 +184,58 @@
 	const produccionesData = [
 		{
 			id: 1,
-			youtubeId: 'rEK8piEKrHU',
-			title: 'Video 1',
-			desc: 'Descripción del video'
+			youtubeId: 'Hnet0w9YR1U',
+			title: 'Aftermovie VFinal'
 		},
 		{
 			id: 2,
-			youtubeId: 'rEK8piEKrHU',
-			title: 'Video 2',
-			desc: 'Descripción del video'
+			youtubeId: 'Rl3QUEVN8ZQ',
+			title: 'Capsula 30 Sonora'
 		},
 		{
 			id: 3,
-			youtubeId: 'rEK8piEKrHU',
-			title: 'Video 3',
-			desc: 'Descripción del video'
+			youtubeId: 'tKMI9KyL0Vs',
+			title: 'SNR Chelina'
 		},
 		{
 			id: 4,
-			youtubeId: 'rEK8piEKrHU',
-			title: 'Video 4',
-			desc: 'Descripción del video'
+			youtubeId: 'fiUxxj5GK1g',
+			title: 'SNR Digweed'
 		},
 		{
 			id: 5,
-			youtubeId: 'rEK8piEKrHU',
-			title: 'Video 5',
-			desc: 'Descripción del video'
+			youtubeId: 'vfVWvJuGq7g',
+			title: 'Martin Fierro 2023'
 		},
 		{
 			id: 6,
-			youtubeId: 'rEK8piEKrHU',
-			title: 'Video 6',
-			desc: 'Descripción del video'
+			youtubeId: '-iVEfnnCSlQ',
+			title: 'TRIPLEX'
+		},
+		{
+			id: 7,
+			youtubeId: 'gEZy9VC7Ze0',
+			title: 'Polemica Uruguay'
+		},
+		{
+			id: 8,
+			youtubeId: 'XYb313Xu7jU',
+			title: 'Polémica en el Bar'
+		},
+		{
+			id: 9,
+			youtubeId: 'GXzxznew1LI',
+			title: 'TIGROU CLARIN'
+		},
+		{
+			id: 10,
+			youtubeId: 'N9s_hA4Zm7c',
+			title: 'SPOT CHAMPAN'
+		},
+		{
+			id: 12,
+			youtubeId: 'wLCKvPXNLfY',
+			title: 'Martin Fierro 2018'
 		}
 	];
 
@@ -231,12 +250,10 @@
 				spaceBetween: 30,
 				breakpoints: {
 					0: {
-						slidesPerView: 1,
-						slidesPerGroup: 1
+						slidesPerView: 1
 					},
 					776: {
-						slidesPerView: 2,
-						slidesPerGroup: 2
+						slidesPerView: 2
 					}
 				}
 			});
@@ -250,16 +267,13 @@
 				spaceBetween: 30,
 				breakpoints: {
 					0: {
-						slidesPerView: 1,
-						slidesPerGroup: 1
+						slidesPerView: 1
 					},
 					825: {
-						slidesPerView: 2,
-						slidesPerGroup: 2
+						slidesPerView: 2
 					},
 					1225: {
-						slidesPerView: 3,
-						slidesPerGroup: 3
+						slidesPerView: 3
 					}
 				}
 			});
@@ -277,16 +291,13 @@
 				spaceBetween: 30,
 				breakpoints: {
 					0: {
-						slidesPerView: 1,
-						slidesPerGroup: 1
+						slidesPerView: 1
 					},
 					750: {
-						slidesPerView: 2,
-						slidesPerGroup: 2
+						slidesPerView: 2
 					},
 					1000: {
-						slidesPerView: 3,
-						slidesPerGroup: 3
+						slidesPerView: 3
 					}
 				}
 			});
@@ -311,11 +322,7 @@
 		{:else if producciones}
 			{#each produccionesData as produccion}
 				<div class="swiper-slide">
-					<CardProducciones
-						youtubeId={produccion.youtubeId}
-						title={produccion.title}
-						desc={produccion.desc}
-					/>
+					<CardProducciones youtubeId={produccion.youtubeId} title={produccion.title} />
 				</div>
 			{/each}
 		{/if}
@@ -351,20 +358,12 @@
 	}
 	.swiper-button-prev,
 	.swiper-button-next {
-		margin-top: 110px;
+		margin-top: 100px;
 		color: #000;
 		--swiper-navigation-size: 30px;
 		background-color: #f2f2f2;
 		height: 50px;
 		width: 50px;
 		border-radius: 10px;
-	}
-
-	.swiper-button-next:hover {
-		scale: 1.2;
-	}
-
-	.swiper-button-prev:hover {
-		scale: 1.2;
 	}
 </style>

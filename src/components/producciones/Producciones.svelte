@@ -6,7 +6,7 @@
 <section class="body">
 	<div class="container">
 		<DashedSeparator />
-		<h1 class="black-title">Nuestros Éxitos en Pantalla</h1>
+		<h1 class="black-title">Algunos de Nuestros Éxitos</h1>
 		<p class="black-text">
 			Revive los momentos que marcaron la historia del entretenimiento Argentino. Desde los clásicos
 			de Gerardo Sofovich hasta nuestras más recientes producciones, cada video es un testimonio de

@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { youtubeId, title, desc }: { youtubeId: string; title: string; desc: string } = $props();
+	let { youtubeId, title }: { youtubeId: string; title: string; } = $props();
 </script>
 
 <div class="card-container">
@@ -14,10 +14,9 @@
 		></iframe>
 	</div>
 
-	<div>
+
 		<h2 class="black-subtitle">{title}</h2>
-		<p class="black-text">{desc}</p>
-	</div>
+
 </div>
 
 <style>
