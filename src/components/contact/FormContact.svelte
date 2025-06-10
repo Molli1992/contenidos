@@ -83,7 +83,7 @@
 
 			<div class="sub-column-container">
 				<p class="text">Email:</p>
-				<p class="black-text">felipe.blaksley@hotmail.com</p>
+				<p class="black-text">administracion@mediacontenidos.online</p>
 			</div>
 		</div>
 
@@ -209,6 +209,10 @@
 		flex-direction: column;
 	}
 
+	.sub-column-container p {
+		word-break: break-all;
+	}
+
 	.form {
 		width: 100%;
 		background-color: #f2f2f2;
@@ -252,6 +256,9 @@
 	}
 
 	@media (max-width: 650px) {
+		.flex-container {
+			gap: 10px;
+		}
 		.column-container {
 			width: 100%;
 		}
@@ -263,6 +270,12 @@
 	@media (max-width: 450px) {
 		.form {
 			padding: 20px;
+		}
+	}
+
+	@media (max-width: 415px) {
+		.sub-column-container p {
+			font-size: 14px;
 		}
 	}
 </style>

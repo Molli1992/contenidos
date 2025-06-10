@@ -1,11 +1,7 @@
 <script lang="ts">
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
-	import {
-		faWhatsapp,
-		faInstagram,
-		faYoutube
-	} from '@fortawesome/free-brands-svg-icons';
-	import { openWhatsapp, openInstagram,  openYouTube } from '../utils/socialNetworks';
+	import { faWhatsapp, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+	import { openWhatsapp, openInstagram, openYouTube } from '../utils/socialNetworks';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { afterNavigate } from '$app/navigation';
@@ -90,7 +86,7 @@
 		<div class="container">
 			<h1 class="white-subtitle">Contacto</h1>
 			<div>
-				<p class="white-text">felipe.blaksley@hotmail.com</p>
+				<p class="white-text">administracion@mediacontenidos.online</p>
 				<p class="white-text">+54 9 11 2458-6710</p>
 			</div>
 		</div>
