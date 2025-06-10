@@ -50,9 +50,14 @@
 		<a href="/contact" class="nav-link" class:active-link={currentPath === '/contact'}>Contacto</a>
 	</nav>
 
-	<div class="right-section">
-		<p>+54 9 11 2458-6710</p>
-	</div>
+	<nav class="right-section">
+		<a
+			href="/producciones"
+			class="nav-link"
+			class:active-link={currentPath === '/producciones'}
+			style="font-size: 22px;">Producciones</a
+		>
+	</nav>
 
 	<button class="menu-toggle" onclick={toggleMenu}>
 		{#if !menu}
@@ -93,6 +98,12 @@
 				class="nav-link"
 				class:active-link={currentPath === '/contact'}
 				onclick={() => (menu = false)}>Contacto</a
+			>
+			<a
+				href="/producciones"
+				class="nav-link"
+				class:active-link={currentPath === '/producciones'}
+				onclick={() => (menu = false)}>Producciones</a
 			>
 
 			<div class="container-icons">
@@ -176,10 +187,6 @@
 		border-left: 1px solid #000000;
 	}
 
-	.right-section p {
-		font-size: 20px;
-	}
-
 	.menu-toggle {
 		display: none;
 		cursor: pointer;
@@ -232,13 +239,13 @@
 		color: blueviolet;
 	}
 
-	@media (max-width: 1050px) {
+	@media (max-width: 1000px) {
 		.header {
 			padding: 25px;
 		}
 	}
 
-	@media (max-width: 990px) {
+	@media (max-width: 925px) {
 		.center-section {
 			display: none;
 		}

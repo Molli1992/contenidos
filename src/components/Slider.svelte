@@ -1,17 +1,23 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Swiper from 'swiper/bundle';
-	import { Pagination } from 'swiper/modules';
+	import { Pagination, Navigation } from 'swiper/modules'; // Import Navigation
 	import 'swiper/css';
 	import 'swiper/css/pagination';
+	import 'swiper/css/navigation'; // Import navigation CSS
 	import CardReviews from './reviews/CardReviews.svelte';
 	import CardService from './service/CardService.svelte';
+	import CardProducciones from './producciones/CardProducciones.svelte';
 
 	let swiperContainer: HTMLDivElement;
 
-	let { reviews, projects }: { reviews?: boolean; projects?: boolean } = $props();
+	let {
+		reviews,
+		projects,
+		producciones
+	}: { reviews?: boolean; projects?: boolean; producciones?: boolean } = $props();
 
-	const paginationMarginTop = reviews ? '30px' : projects ? '90px' : '0';
+	const paginationMarginTop = reviews ? '30px' : projects ? '90px' : producciones ? '40px' : '0';
 
 	const reviewsData = [
 		{
@@ -19,84 +25,84 @@
 			name: 'Carolina Méndez',
 			role: 'Productora audiovisual',
 			review:
-				'“Trabajar con Contenidos marcó un antes y un después en nuestras producciones. Supieron interpretar nuestra visión y llevarla a escena con profesionalismo y creatividad. Totalmente recomendables.”'
+				'"Trabajar con Contenidos marcó un antes y un después en nuestras producciones. Supieron interpretar nuestra visión y llevarla a escena con profesionalismo y creatividad. Totalmente recomendables."'
 		},
 		{
 			id: 2,
 			name: 'Esteban Rodríguez',
 			role: 'Organizador de eventos',
 			review:
-				'“La experiencia fue impecable. Desde la planificación hasta la ejecución técnica, Contenidos nos brindó un acompañamiento constante y resultados que superaron nuestras expectativas.”'
+				'"La experiencia fue impecable. Desde la planificación hasta la ejecución técnica, Contenidos nos brindó un acompañamiento constante y resultados que superaron nuestras expectativas."'
 		},
 		{
 			id: 3,
 			name: 'Lucía Fernández',
 			role: 'Periodista cultural',
 			review:
-				'“Contenidos demuestra un compromiso auténtico con el arte y la cultura. La calidad de sus producciones es sobresaliente, y siempre logran generar un impacto positivo en el público.”'
+				'"Contenidos demuestra un compromiso auténtico con el arte y la cultura. La calidad de sus producciones es sobresaliente, y siempre logran generar un impacto positivo en el público."'
 		},
 		{
 			id: 4,
 			name: 'Matías Gómez',
 			role: 'Director teatral',
 			review:
-				'“Su equipo técnico y artístico tiene una mirada integral que facilita todo el proceso creativo. Con Contenidos, cada detalle está cuidado, y eso se nota en el resultado final.”'
+				'"Su equipo técnico y artístico tiene una mirada integral que facilita todo el proceso creativo. Con Contenidos, cada detalle está cuidado, y eso se nota en el resultado final."'
 		},
 		{
 			id: 5,
 			name: 'Mariana López',
 			role: 'Gestora cultural',
 			review:
-				'“Gracias a Contenidos pudimos llevar adelante un festival de gran escala sin inconvenientes. Se destacan por su organización, respuesta rápida y capacidad de adaptación.”'
+				'"Gracias a Contenidos pudimos llevar adelante un festival de gran escala sin inconvenientes. Se destacan por su organización, respuesta rápida y capacidad de adaptación."'
 		},
 		{
 			id: 6,
 			name: 'Santiago Paredes',
 			role: 'Músico independiente',
 			review:
-				'“Confié en Contenidos para la producción de mi show y fue la mejor decisión. Supieron potenciar mi propuesta artística y cuidar cada aspecto del evento. ¡Excelente trato y resultados!”'
+				'"Confié en Contenidos para la producción de mi show y fue la mejor decisión. Supieron potenciar mi propuesta artística y cuidar cada aspecto del evento. ¡Excelente trato y resultados!"'
 		},
 		{
 			id: 7,
 			name: 'Florencia Ibáñez',
 			role: 'Directora de arte',
 			review:
-				'“Fue un placer trabajar con un equipo tan comprometido y creativo. Entendieron rápidamente nuestras necesidades visuales y entregaron materiales de altísima calidad.”'
+				'"Fue un placer trabajar con un equipo tan comprometido y creativo. Entendieron rápidamente nuestras necesidades visuales y entregaron materiales de altísima calidad."'
 		},
 		{
 			id: 8,
 			name: 'Julián Cabrera',
 			role: 'Empresario del entretenimiento',
 			review:
-				'“He trabajado con muchas productoras, pero pocas tienen la capacidad de resolución que tiene Contenidos. Siempre ofrecen soluciones prácticas sin perder nivel.”'
+				'"He trabajado con muchas productoras, pero pocas tienen la capacidad de resolución que tiene Contenidos. Siempre ofrecen soluciones prácticas sin perder nivel."'
 		},
 		{
 			id: 9,
 			name: 'Natalia Duarte',
 			role: 'Productora de televisión',
 			review:
-				'“Contenidos es sinónimo de confianza. Su experiencia en TV se nota desde la primera reunión. Cumplen con los tiempos y elevan el estándar de cualquier producción.”'
+				'"Contenidos es sinónimo de confianza. Su experiencia en TV se nota desde la primera reunión. Cumplen con los tiempos y elevan el estándar de cualquier producción."'
 		},
 		{
 			id: 10,
 			name: 'Tomás Vega',
 			role: 'Iluminador escénico',
 			review:
-				'“Siempre que trabajamos con Contenidos nos sentimos respaldados. Su logística y soporte técnico hacen que todo funcione como reloj. Un equipo sólido.”'
+				'"Siempre que trabajamos con Contenidos nos sentimos respaldados. Su logística y soporte técnico hacen que todo funcione como reloj. Un equipo sólido."'
 		},
 		{
 			id: 11,
 			name: 'Rocío Morales',
 			role: 'Actriz y docente',
 			review:
-				'“Participé en varias producciones con Contenidos y siempre valoré el respeto por el artista. Cuidan cada instancia del proceso y fomentan un ambiente creativo.”'
+				'"Participé en varias producciones con Contenidos y siempre valoré el respeto por el artista. Cuidan cada instancia del proceso y fomentan un ambiente creativo."'
 		},
 		{
 			id: 12,
 			name: 'Federico Torres',
 			role: 'Técnico de sonido',
 			review:
-				'“La coordinación con el equipo de Contenidos fue excelente. Todo estaba previsto y claro desde el inicio. Da gusto trabajar con profesionales así.”'
+				'"La coordinación con el equipo de Contenidos fue excelente. Todo estaba previsto y claro desde el inicio. Da gusto trabajar con profesionales así."'
 		}
 	];
 
@@ -175,6 +181,45 @@
 		}
 	];
 
+	const produccionesData = [
+		{
+			id: 1,
+			youtubeId: 'rEK8piEKrHU',
+			title: 'Video 1',
+			desc: 'Descripción del video'
+		},
+		{
+			id: 2,
+			youtubeId: 'rEK8piEKrHU',
+			title: 'Video 2',
+			desc: 'Descripción del video'
+		},
+		{
+			id: 3,
+			youtubeId: 'rEK8piEKrHU',
+			title: 'Video 3',
+			desc: 'Descripción del video'
+		},
+		{
+			id: 4,
+			youtubeId: 'rEK8piEKrHU',
+			title: 'Video 4',
+			desc: 'Descripción del video'
+		},
+		{
+			id: 5,
+			youtubeId: 'rEK8piEKrHU',
+			title: 'Video 5',
+			desc: 'Descripción del video'
+		},
+		{
+			id: 6,
+			youtubeId: 'rEK8piEKrHU',
+			title: 'Video 6',
+			desc: 'Descripción del video'
+		}
+	];
+
 	onMount(() => {
 		if (reviews) {
 			new Swiper(swiperContainer, {
@@ -218,6 +263,33 @@
 					}
 				}
 			});
+		} else if (producciones) {
+			new Swiper(swiperContainer, {
+				modules: [Pagination, Navigation],
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
+				},
+				spaceBetween: 30,
+				breakpoints: {
+					0: {
+						slidesPerView: 1,
+						slidesPerGroup: 1
+					},
+					750: {
+						slidesPerView: 2,
+						slidesPerGroup: 2
+					},
+					1000: {
+						slidesPerView: 3,
+						slidesPerGroup: 3
+					}
+				}
+			});
 		}
 	});
 </script>
@@ -236,8 +308,22 @@
 					<CardService imageUrl={project.img} name={project.name} service={project.service} />
 				</div>
 			{/each}
+		{:else if producciones}
+			{#each produccionesData as produccion}
+				<div class="swiper-slide">
+					<CardProducciones
+						youtubeId={produccion.youtubeId}
+						title={produccion.title}
+						desc={produccion.desc}
+					/>
+				</div>
+			{/each}
 		{/if}
 	</div>
+	{#if producciones}
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+	{/if}
 	<div class="swiper-pagination" style="margin-top: {paginationMarginTop}"></div>
 </div>
 
@@ -247,6 +333,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		position: relative;
 	}
 
 	.swiper-wrapper {
@@ -261,5 +348,23 @@
 
 	.swiper-pagination {
 		position: relative;
+	}
+	.swiper-button-prev,
+	.swiper-button-next {
+		margin-top: 110px;
+		color: #000;
+		--swiper-navigation-size: 30px;
+		background-color: #f2f2f2;
+		height: 50px;
+		width: 50px;
+		border-radius: 10px;
+	}
+
+	.swiper-button-next:hover {
+		scale: 1.2;
+	}
+
+	.swiper-button-prev:hover {
+		scale: 1.2;
 	}
 </style>
