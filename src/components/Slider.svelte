@@ -24,23 +24,27 @@
 	}: { reviews?: boolean; projects?: boolean; producciones?: boolean; companies?: boolean } =
 		$props();
 
-	const paginationMarginTop = reviews
-		? '30px'
+	const bottom = reviews
+		? '50px'
 		: projects
-			? '90px'
+			? '50px'
 			: producciones
-				? '40px'
+				? '80px'
 				: companies
-					? '50px'
-					: '0';
+					? '80px'
+					: '0px';
 
 	onMount(() => {
 		if (reviews) {
 			new Swiper(swiperContainer, {
-				modules: [Pagination],
+				modules: [Pagination, Navigation],
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
 				},
 				spaceBetween: 30,
 				breakpoints: {
@@ -54,10 +58,14 @@
 			});
 		} else if (projects) {
 			new Swiper(swiperContainer, {
-				modules: [Pagination],
+				modules: [Pagination, Navigation],
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
 				},
 				spaceBetween: 30,
 				breakpoints: {
@@ -98,10 +106,14 @@
 			});
 		} else if (companies) {
 			new Swiper(swiperContainer, {
-				modules: [Pagination, Autoplay],
+				modules: [Pagination, Autoplay, Navigation],
 				pagination: {
 					el: '.swiper-pagination',
 					clickable: true
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev'
 				},
 				spaceBetween: 30,
 				autoplay: {
@@ -153,11 +165,13 @@
 			{/each}
 		{/if}
 	</div>
-	{#if producciones}
+
+	<div class="container-navigation" style="bottom: {bottom}">
 		<div class="swiper-button-prev"></div>
 		<div class="swiper-button-next"></div>
-	{/if}
-	<div class="swiper-pagination" style="margin-top: {paginationMarginTop}"></div>
+
+		<div class="swiper-pagination"></div>
+	</div>
 </div>
 
 <style>
@@ -167,6 +181,7 @@
 		flex-direction: column;
 		align-items: center;
 		position: relative;
+		padding-bottom: 150px;
 	}
 
 	.swiper-wrapper {
@@ -179,12 +194,16 @@
 		justify-content: center;
 	}
 
-	.swiper-pagination {
-		position: relative;
+	.container-navigation {
+		width: 100%;
+		position: absolute;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
+
 	.swiper-button-prev,
 	.swiper-button-next {
-		margin-top: 100px;
 		color: #000;
 		--swiper-navigation-size: 30px;
 		background-color: #f2f2f2;
