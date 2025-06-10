@@ -29,7 +29,7 @@
 	<meta property="og:site_name" content="Contenidos" />
 	<meta
 		property="og:image"
-		content="https://img.freepik.com/vector-premium/ilustracion-logotipo-letra-c-abstracta-estilo-moderno-minimalista_1375-6978.jpg"
+		content=""
 	/>
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
@@ -46,7 +46,7 @@
 	/>
 	<meta
 		name="twitter:image"
-		content="https://img.freepik.com/vector-premium/ilustracion-logotipo-letra-c-abstracta-estilo-moderno-minimalista_1375-6978.jpg"
+		content=""
 	/>
 </svelte:head>
 
