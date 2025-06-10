@@ -5,7 +5,7 @@
 	import HomeServices from '../components/home/HomeServices.svelte';
 	import HomeKeyFeatures from '../components/home/HomeKeyFeatures.svelte';
 	import Features from '../components/features/Features.svelte';
-	import Reviews from '../components/reviews/Reviews.svelte';
+	import Companies from '../components/companies/Companies.svelte';
 
 	const imageUrl = heroImg;
 	const title = 'Llevamos el entretenimiento y la comunicación al siguiente nivel';
@@ -24,7 +24,7 @@
 
 	<Features />
 
-	<Reviews />
+	<Companies />
 </main>
 
 <style>
