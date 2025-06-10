@@ -42,10 +42,10 @@
 		<div class="container-text">
 			<DashedSeparator />
 
-			<h1 class="white-title">Creamos Experiencias Memorables</h1>
+			<h1 class="white-title">Potenciamos tu marca en la vía pública</h1>
 			<p class="white-text">
-				Nos involucramos en cada etapa del proceso creativo para lograr resultados únicos y
-				alineados con tu visión.
+				Publicitamos en pantallas LED de alto impacto para garantizar presencia constante y conexión
+				directa con tu audiencia.
 			</p>
 
 			<div class="icon-container">
@@ -54,8 +54,8 @@
 				</div>
 
 				<p class="white-text">
-					Nos sumergimos en el análisis de tu audiencia para diseñar propuestas que conecten
-					emocionalmente.
+					Estudiamos puntos estratégicos de alto tráfico para maximizar la visibilidad de tu
+					mensaje.
 				</p>
 			</div>
 
@@ -65,7 +65,7 @@
 				</div>
 
 				<p class="white-text">
-					Desarrollamos contenidos que cuentan historias con identidad, impacto y valor cultural.
+					Creamos contenidos visuales atractivos y dinámicos adaptados a pantallas LED urbanas.
 				</p>
 			</div>
 
@@ -75,7 +75,8 @@
 				</div>
 
 				<p class="white-text">
-					Combinamos arte, tecnología y estrategia para abordar proyectos desde una mirada integral.
+					Integramos tecnología, creatividad y estrategia para campañas memorables en la vía
+					pública.
 				</p>
 			</div>
 		</div>
@@ -110,7 +111,7 @@
 	.img {
 		width: 100%;
 		height: 425px;
-		background-image: url('../../assets/images/home/home-features-img.JPG');
+		background-image: url('../../assets/images/home/img-pantalla.jpg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center;

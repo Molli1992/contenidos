@@ -8,66 +8,73 @@ import ImgProyects7 from '../assets/images/proyects/img-proyects-7.jpg';
 import ImgProyects8 from '../assets/images/proyects/img-proyects-8.png';
 import ImgProyects9 from '../assets/images/proyects/img-proyects-9.png';
 import ImgProyects10 from '../assets/images/proyects/img-proyects-10.jpg';
+import ImgProyects11 from '../assets/images/proyects/img-proyects-11.jpg';
 
 export const projectsData = [
 	{
+		id: 11,
+		img: ImgProyects11,
+		name: 'Publicidad',
+		service: 'Pantallas LED'
+	},
+	{
 		id: 1,
 		img: ImgProyects1,
-		name: 'Content Strategy',
-		service: 'DIGITAL PR'
+		name: 'Elenco Polemica en el Bar',
+		service: 'TV'
 	},
 	{
 		id: 2,
 		img: ImgProyects2,
-		name: 'SEO Optimization',
-		service: 'PPC | SEO'
+		name: 'Obra de Teatro',
+		service: 'Teatro'
 	},
 	{
 		id: 3,
 		img: ImgProyects3,
-		name: 'Social Engagement',
-		service: 'SEO | SMM'
+		name: 'Circo Acrobatico',
+		service: 'Circo'
 	},
 	{
 		id: 4,
 		img: ImgProyects4,
-		name: 'Technical SEO',
-		service: 'SEO'
+		name: 'Obra de Teatro',
+		service: 'Teatro'
 	},
 	{
 		id: 5,
 		img: ImgProyects5,
-		name: 'Domain Migration',
-		service: 'PPC | SEO'
+		name: 'Los Corruptelli',
+		service: 'TV'
 	},
 	{
 		id: 6,
 		img: ImgProyects6,
-		name: 'Content Marketing',
-		service: 'DIGITAL PR | SEO'
+		name: 'Obra de Teatro',
+		service: 'Teatro'
 	},
 	{
 		id: 7,
 		img: ImgProyects7,
-		name: 'Content Marketing',
-		service: 'DIGITAL PR | SEO'
+		name: 'Programa de television',
+		service: 'TV'
 	},
 	{
 		id: 8,
 		img: ImgProyects8,
-		name: 'Content Marketing',
-		service: 'DIGITAL PR | SEO'
+		name: 'Pobres pero casi Honradas',
+		service: 'TV'
 	},
 	{
 		id: 9,
 		img: ImgProyects9,
-		name: 'Content Marketing',
-		service: 'DIGITAL PR | SEO'
+		name: 'La Noche del Domingo',
+		service: 'TV'
 	},
 	{
 		id: 10,
 		img: ImgProyects10,
-		name: 'Content Marketing',
-		service: 'DIGITAL PR | SEO'
+		name: 'Obra de Teatro',
+		service: 'Teatro'
 	}
 ];
