@@ -35,8 +35,10 @@
 					: '0px';
 
 	onMount(() => {
+		let swiperInstance: Swiper | null = null;
+
 		if (reviews) {
-			new Swiper(swiperContainer, {
+			swiperInstance = new Swiper(swiperContainer, {
 				modules: [Pagination, Navigation],
 				pagination: {
 					el: '.swiper-pagination',
@@ -48,16 +50,12 @@
 				},
 				spaceBetween: 30,
 				breakpoints: {
-					0: {
-						slidesPerView: 1
-					},
-					776: {
-						slidesPerView: 2
-					}
+					0: { slidesPerView: 1 },
+					776: { slidesPerView: 2 }
 				}
 			});
 		} else if (projects) {
-			new Swiper(swiperContainer, {
+			swiperInstance = new Swiper(swiperContainer, {
 				modules: [Pagination, Navigation],
 				pagination: {
 					el: '.swiper-pagination',
@@ -69,19 +67,13 @@
 				},
 				spaceBetween: 30,
 				breakpoints: {
-					0: {
-						slidesPerView: 1
-					},
-					825: {
-						slidesPerView: 2
-					},
-					1225: {
-						slidesPerView: 3
-					}
+					0: { slidesPerView: 1 },
+					825: { slidesPerView: 2 },
+					1225: { slidesPerView: 3 }
 				}
 			});
 		} else if (producciones) {
-			new Swiper(swiperContainer, {
+			swiperInstance = new Swiper(swiperContainer, {
 				modules: [Pagination, Navigation],
 				pagination: {
 					el: '.swiper-pagination',
@@ -93,19 +85,13 @@
 				},
 				spaceBetween: 30,
 				breakpoints: {
-					0: {
-						slidesPerView: 1
-					},
-					750: {
-						slidesPerView: 2
-					},
-					1000: {
-						slidesPerView: 3
-					}
+					0: { slidesPerView: 1 },
+					750: { slidesPerView: 2 },
+					1000: { slidesPerView: 3 }
 				}
 			});
 		} else if (companies) {
-			new Swiper(swiperContainer, {
+			swiperInstance = new Swiper(swiperContainer, {
 				modules: [Pagination, Autoplay, Navigation],
 				pagination: {
 					el: '.swiper-pagination',
@@ -122,15 +108,45 @@
 					pauseOnMouseEnter: true
 				},
 				breakpoints: {
-					600: {
-						slidesPerView: 2
-					},
-					900: {
-						slidesPerView: 3
-					},
-					1200: {
-						slidesPerView: 4
-					}
+					600: { slidesPerView: 2 },
+					900: { slidesPerView: 3 },
+					1200: { slidesPerView: 4 }
+				}
+			});
+		}
+
+		if (swiperInstance) {
+			const nextBtn = swiperContainer.querySelector('.swiper-button-next');
+			const prevBtn = swiperContainer.querySelector('.swiper-button-prev');
+
+			const slidesPerView =
+				typeof swiperInstance.params.slidesPerView === 'number'
+					? swiperInstance.params.slidesPerView
+					: 1;
+
+			const maxIndex = swiperInstance.slides.length - slidesPerView;
+			const minIndex = 0;
+
+			nextBtn?.removeEventListener('click', swiperInstance.navigation.nextEl as any);
+			prevBtn?.removeEventListener('click', swiperInstance.navigation.prevEl as any);
+
+			nextBtn?.addEventListener('click', () => {
+				const currentIndex = swiperInstance.activeIndex;
+				const nextIndex = currentIndex - 1;
+				if (maxIndex === currentIndex) {
+					swiperInstance.slideTo(maxIndex);
+				} else {
+					swiperInstance.slideTo(nextIndex);
+				}
+			});
+
+			prevBtn?.addEventListener('click', () => {
+				const currentIndex = swiperInstance.activeIndex;
+				const prevIndex = currentIndex + 1;
+				if (minIndex === currentIndex) {
+					swiperInstance.slideTo(minIndex);
+				} else {
+					swiperInstance.slideTo(prevIndex);
 				}
 			});
 		}
