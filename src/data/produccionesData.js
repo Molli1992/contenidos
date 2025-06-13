@@ -46,6 +46,11 @@ export const produccionesData = [
 	},
 	{
 		id: 10,
+		youtubeId: 'CrWOn6WkC3U',
+		title: 'Pantallas LED'
+	},
+	{
+		id: 11,
 		youtubeId: 'N9s_hA4Zm7c',
 		title: 'SPOT CHAMPAN'
 	},
