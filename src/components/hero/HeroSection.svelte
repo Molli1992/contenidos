@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { openWhatsapp, openInstagram } from '../../utils/socialNetworks';
+	import { openWhatsapp } from '../../utils/socialNetworks';
 	import { fly } from 'svelte/transition';
 
 	let { imageUrl, title, description }: { imageUrl: string; title: string; description: string } =
@@ -29,7 +29,6 @@
 
 			<div class="hero-buttons" in:fly={{ y: 50, duration: 600, delay: 400 }}>
 				<button onclick={openWhatsapp} class="whatsapp button"> WhatsApp </button>
-				<button onclick={openInstagram} class="instagram button"> Instagram </button>
 			</div>
 		</div>
 	{/if}
@@ -96,15 +95,6 @@
 	.whatsapp:hover {
 		background-color: transparent;
 		border-color: #25d366;
-	}
-
-	.instagram {
-		background-color: #833ab4;
-	}
-
-	.instagram:hover {
-		background-color: transparent;
-		border-color: #833ab4;
 	}
 
 	@media (max-width: 700px) {

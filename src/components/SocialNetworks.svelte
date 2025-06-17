@@ -1,16 +1,14 @@
 <script lang="ts">
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
-	import { faWhatsapp, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-	import { openWhatsapp, openInstagram, openYouTube } from '../utils/socialNetworks';
+	import { faWhatsapp, faYoutube } from '@fortawesome/free-brands-svg-icons';
+	import { openWhatsapp, openYouTube } from '../utils/socialNetworks';
 </script>
 
 <div class="container-icons">
 	<button onclick={openWhatsapp}>
 		<FontAwesomeIcon icon={faWhatsapp} />
 	</button>
-	<button onclick={openInstagram}>
-		<FontAwesomeIcon icon={faInstagram} />
-	</button>
+
 	<button onclick={openYouTube}>
 		<FontAwesomeIcon icon={faYoutube} />
 	</button>
