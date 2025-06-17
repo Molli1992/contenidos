@@ -6,6 +6,7 @@
 	import { faWhatsapp, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 	import { openWhatsapp, openInstagram, openYouTube } from '../utils/socialNetworks';
 	import Logo from '../assets/logo/logo-contenidos.png';
+	import SocialNetworks from './SocialNetworks.svelte';
 
 	let currentPath: string = $derived(page.url.pathname);
 	let scrolled: boolean = $state(false);
@@ -101,17 +102,7 @@
 				onclick={() => (menu = false)}>Producciones</a
 			>
 
-			<div class="container-icons">
-				<button onclick={openWhatsapp}>
-					<FontAwesomeIcon icon={faWhatsapp} />
-				</button>
-				<button onclick={openInstagram}>
-					<FontAwesomeIcon icon={faInstagram} />
-				</button>
-				<button onclick={openYouTube}>
-					<FontAwesomeIcon icon={faYoutube} />
-				</button>
-			</div>
+			<SocialNetworks />
 		</div>
 	{/if}
 </header>
@@ -204,31 +195,6 @@
 		font-weight: bold;
 		font-size: 16px;
 		border-top: 1px solid #000000;
-	}
-
-	.container-icons {
-		width: 100%;
-		display: flex;
-		gap: 15px;
-	}
-
-	.container-icons button {
-		all: unset;
-		cursor: pointer;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 40px;
-		height: 40px;
-		border-radius: 50%;
-		font-size: 20px;
-		background-color: blueviolet;
-		color: #ffffff;
-	}
-
-	.container-icons button:hover {
-		background-color: #ffffff;
-		color: blueviolet;
 	}
 
 	@media (max-width: 1000px) {

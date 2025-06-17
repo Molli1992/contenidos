@@ -1,5 +1,7 @@
+import { contactInfo } from '../data/contactInfo';
+
 export const openWhatsapp = () => {
-	window.open('https://www.whatsapp.com/', '_blank');
+	window.open(`https://wa.me/${contactInfo.whatsapp}`, '_blank');
 };
 
 export const openInstagram = () => {
@@ -7,5 +9,5 @@ export const openInstagram = () => {
 };
 
 export const openYouTube = () => {
-	window.open('https://www.youtube.com/', '_blank');
+	window.open(`https://www.youtube.com/${contactInfo.youtube}`, '_blank');
 };

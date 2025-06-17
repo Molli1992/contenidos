@@ -1,12 +1,11 @@
 <script lang="ts">
-	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
-	import { faWhatsapp, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-	import { openWhatsapp, openInstagram, openYouTube } from '../utils/socialNetworks';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { afterNavigate } from '$app/navigation';
 	import Logo from '../assets/logo/logo-contenidos-sin-fondo.png';
 	import { page } from '$app/state';
+	import { contactInfo } from '../data/contactInfo';
+	import SocialNetworks from './SocialNetworks.svelte';
 
 	let show: boolean = $state(false);
 	let footerRef: HTMLDivElement | null = $state(null);
@@ -55,17 +54,7 @@
 				medios.
 			</p>
 
-			<div class="container-icons">
-				<button onclick={openWhatsapp}>
-					<FontAwesomeIcon icon={faWhatsapp} />
-				</button>
-				<button onclick={openInstagram}>
-					<FontAwesomeIcon icon={faInstagram} />
-				</button>
-				<button onclick={openYouTube}>
-					<FontAwesomeIcon icon={faYoutube} />
-				</button>
-			</div>
+			<SocialNetworks />
 		</div>
 
 		<div class="container">
@@ -86,8 +75,8 @@
 		<div class="container">
 			<h1 class="white-subtitle">Contacto</h1>
 			<div>
-				<p class="white-text">administracion@mediacontenidos.online</p>
-				<p class="white-text">+54 9 11 2458-6710</p>
+				<p class="white-text">{contactInfo.email}</p>
+				<p class="white-text">{contactInfo.phone}</p>
 			</div>
 		</div>
 	</div>
@@ -127,30 +116,6 @@
 	.logo {
 		width: 250px;
 		filter: brightness(1) invert(1);
-	}
-
-	.container-icons {
-		display: flex;
-		gap: 15px;
-	}
-
-	.container-icons button {
-		all: unset;
-		cursor: pointer;
-		background-color: #ffffff;
-		height: 40px;
-		width: 40px;
-		border-radius: 50%;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: blueviolet;
-		font-size: 18px;
-	}
-
-	.container-icons button:hover {
-		background-color: blueviolet;
-		color: #ffffff;
 	}
 
 	.container h1 {
