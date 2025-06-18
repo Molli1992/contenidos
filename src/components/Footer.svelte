@@ -69,6 +69,9 @@
 				<a href="/contact" class="nav-link" class:active-link={currentPath === '/contact'}
 					>Contacto</a
 				>
+				<a href="/producciones" class="nav-link" class:active-link={currentPath === '/producciones'}
+					>Producciones</a
+				>
 			</nav>
 		</div>
 

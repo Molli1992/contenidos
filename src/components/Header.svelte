@@ -3,8 +3,6 @@
 	import { page } from '$app/state';
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-	import { faWhatsapp, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-	import { openWhatsapp, openInstagram, openYouTube } from '../utils/socialNetworks';
 	import Logo from '../assets/logo/logo-contenidos.png';
 	import SocialNetworks from './SocialNetworks.svelte';
 
