@@ -1,8 +1,8 @@
 export const dataEvents = [
 	{
-		title: 'Creación de Contenidos',
+		title: 'Creación de NTG',
 		description:
-			'Fundación del estudio creativo Contenidos por Gerardo Sofovich, marcando el inicio de una nueva era en la producción de espectáculos y televisión.',
+			'Fundación del estudio creativo NTG por Gerardo Sofovich, marcando el inicio de una nueva era en la producción de espectáculos y televisión.',
 		year: '1997',
 		color: '#f7a400',
 		side: 'left'

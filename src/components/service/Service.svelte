@@ -8,10 +8,10 @@
 <section class="body">
 	<div class="container">
 		<DashedSeparator />
-		<h1 class="black-title">Cómo Contenidos Potencia Tus Proyectos</h1>
+		<h1 class="black-title">Cómo NTG Potencia Tus Proyectos</h1>
 		<p class="black-text">
 			Con décadas de experiencia en entretenimiento, publicidad y producción de eventos, en
-			Contenidos anticipamos tendencias y transformamos ideas en espectáculos memorables. Nuestra
+			NTG anticipamos tendencias y transformamos ideas en espectáculos memorables. Nuestra
 			innovación y compromiso nos posicionan como referentes en la industria.
 		</p>
 

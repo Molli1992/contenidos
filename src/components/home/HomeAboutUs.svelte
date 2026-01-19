@@ -38,7 +38,7 @@
 			<h1 class="black-title">Creatividad, espectáculo y legado en la escena digital</h1>
 
 			<p class="black-text">
-				Contenidos es una empresa creada por Gerardo Sofovich. En el teatro rompió récords de
+				NTG es una empresa creada por Gerardo Sofovich. En el teatro rompió récords de
 				recaudación en calle Corrientes, en Mar del Plata y en Villa Carlos Paz. “El champán las
 				pone mimosas” —estrenada en los años '70 y reversionada durante este siglo— es su carta de
 				presentación ineludible.

@@ -36,7 +36,7 @@
 		<DashedSeparator />
 		<h1 class="black-title">El legado de una empresa de familia, reinventado en lo digital</h1>
 		<p class="black-text">
-			Contenidos se dedica a la producción, realización y comercialización de espectáculos. También
+			NTG se dedica a la producción, realización y comercialización de espectáculos. También
 			ofrecemos servicios de publicidad en todos los medios y contamos con Pantallas LED propias de
 			vía pública en lugares estratégicos de CABA.
 		</p>

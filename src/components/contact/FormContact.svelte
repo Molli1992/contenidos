@@ -70,7 +70,7 @@
 		<DashedSeparator />
 		<h1 class="black-title">Contactanos</h1>
 		<p class="black-text">
-			Contenidos es una productora con historia en televisión, teatro y eventos. Fundada por Gerardo
+			NTG es una productora con historia en televisión, teatro y eventos. Fundada por Gerardo
 			Sofovich, seguimos creando propuestas que marcan la cultura y el entretenimiento Argentino.
 		</p>
 

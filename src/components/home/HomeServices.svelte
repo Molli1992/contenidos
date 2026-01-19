@@ -54,7 +54,7 @@
 <section class="body">
 	<DashedSeparator />
 	<div class="container-title">
-		<h1 class="black-title">Lo Que Hacemos en Contenidos</h1>
+		<h1 class="black-title">Lo Que Hacemos en NTG</h1>
 		<p class="black-text">
 			Creamos experiencias inolvidables en teatro, televisión, cine y eventos. Ofrecemos soluciones
 			integrales que combinan creatividad, técnica y producción para cada proyecto.

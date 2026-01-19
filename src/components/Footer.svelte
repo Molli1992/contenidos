@@ -49,7 +49,7 @@
 			</div>
 
 			<p class="white-text">
-				Desde sus inicios con Gerardo Sofovich y con más de dos décadas de trayectoria, Contenidos
+				Desde sus inicios con Gerardo Sofovich y con más de dos décadas de trayectoria, NTG
 				sigue reinventándose con nuevos formatos y experiencias en entretenimiento, publicidad y
 				medios.
 			</p>
@@ -86,7 +86,7 @@
 
 	<div class="bottom-container">
 		<p>Términos de uso | Política de Privacidad y Medio Ambiente</p>
-		<p>Copyright © 2025 Contenidos. Todos los derechos reservados.</p>
+		<p>Copyright © 2025 NTG SA. Todos los derechos reservados.</p>
 	</div>
 </footer>
 

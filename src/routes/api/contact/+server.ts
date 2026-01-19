@@ -23,7 +23,7 @@ export const POST: RequestHandler = async ({ request }) => {
         <div style="font-family: Arial, sans-serif; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #ddd; border-radius: 8px; padding: 16px; background-color: #f9f9f9;">
           <h2 style="color: #8b0000; text-align: center; margin-bottom: 24px;">Mensaje de Contacto</h2>
           <p style="font-size: 16px; line-height: 1.5;">
-            Hola <strong>Contenidos</strong>, un usuario ha enviado un mensaje desde el formulario de contacto de su sitio web.
+            Hola <strong>NTG</strong>, un usuario ha enviado un mensaje desde el formulario de contacto de su sitio web.
           </p>
           <hr style="border: none; border-top: 1px solid #ddd; margin: 16px 0;">
           <h3 style="color: #8b0000;">Detalles del mensaje</h3>
@@ -40,7 +40,7 @@ export const POST: RequestHandler = async ({ request }) => {
           </blockquote>
           <hr style="border: none; border-top: 1px solid #ddd; margin: 24px 0;">
           <footer style="text-align: center; font-size: 14px; color: #777;">
-            <p>Este correo fue generado automáticamente desde el sitio web de <strong>Contenidos</strong>.</p>
+            <p>Este correo fue generado automáticamente desde el sitio web de <strong>NTG</strong>.</p>
           </footer>
         </div>
       `

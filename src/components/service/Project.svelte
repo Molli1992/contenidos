@@ -9,7 +9,7 @@
 		<h1 class="black-title">Disfrutá Nuestros Proyectos Destacados</h1>
 		<p class="black-text">
 			Te invitamos a conocer algunas de nuestras producciones más emblemáticas en teatro,
-			televisión, cine y eventos. En Contenidos trabajamos con pasión para hacer realidad cada idea,
+			televisión, cine y eventos. En NTG trabajamos con pasión para hacer realidad cada idea,
 			aportando creatividad, experiencia y compromiso en cada proyecto.
 		</p>
 	</div>

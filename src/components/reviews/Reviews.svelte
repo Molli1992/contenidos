@@ -10,7 +10,7 @@
 			<h1 class="black-title">Lo Que Dicen de Nosotros</h1>
 			<p class="black-text">
 				El reconocimiento del público, los medios y nuestros colaboradores avalan el trabajo de
-				Contenidos a lo largo de los años. Nuestra historia se construye con cada espectáculo,
+				NTG a lo largo de los años. Nuestra historia se construye con cada espectáculo,
 				programa y evento que deja huella.
 			</p>
 		</div>
