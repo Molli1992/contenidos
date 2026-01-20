@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { afterNavigate } from '$app/navigation';
-	import Logo from '../assets/logo/logo-contenidos-sin-fondo.png';
 	import { page } from '$app/state';
 	import { contactInfo } from '../data/contactInfo';
 	import SocialNetworks from './SocialNetworks.svelte';
@@ -36,11 +35,11 @@
 <footer class="footer">
 	<div class="main-container">
 		<div class="container">
-			<div bind:this={footerRef}>
+			<div >
 				{#if show}
 					<div in:fly={{ x: -200, duration: 1000 }} bind:this={footerRef}>
 						<a href="/">
-							<img src={Logo} alt="Company Logo" class="logo" />
+							<h1 class="logo">NTG SA</h1>
 						</a>
 					</div>
 				{:else}
@@ -117,8 +116,9 @@
 	}
 
 	.logo {
-		width: 250px;
-		filter: brightness(1) invert(1);
+		font-size: 42px;
+		color: #ffffff;
+		font-weight: bold;
 	}
 
 	.container h1 {

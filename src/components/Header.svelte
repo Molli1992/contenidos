@@ -3,7 +3,6 @@
 	import { page } from '$app/state';
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
-	import Logo from '../assets/logo/logo-contenidos.png';
 	import SocialNetworks from './SocialNetworks.svelte';
 
 	let currentPath: string = $derived(page.url.pathname);
@@ -31,7 +30,7 @@
 
 <header class="header">
 	<a href="/">
-		<img src={Logo} alt="Company Logo" class="logo" />
+		<h1 class="logo">NTG SA</h1>
 	</a>
 
 	<nav class="center-section">
@@ -122,7 +121,9 @@
 	}
 
 	.logo {
-		height: 50px;
+		font-size: 32px;
+		color: #000000;
+		font-weight: bold;
 	}
 
 	.center-section,
