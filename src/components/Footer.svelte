@@ -5,6 +5,7 @@
 	import { page } from '$app/state';
 	import { contactInfo } from '../data/contactInfo';
 	import SocialNetworks from './SocialNetworks.svelte';
+	import Logo from '../assets/logo/ntga-logo.png';
 
 	let show: boolean = $state(false);
 	let footerRef: HTMLDivElement | null = $state(null);
@@ -35,11 +36,11 @@
 <footer class="footer">
 	<div class="main-container">
 		<div class="container">
-			<div >
+			<div>
 				{#if show}
 					<div in:fly={{ x: -200, duration: 1000 }} bind:this={footerRef}>
 						<a href="/">
-							<h1 class="logo">NTG SA</h1>
+							<img src={Logo} alt="Logo" class="logo" />
 						</a>
 					</div>
 				{:else}
@@ -48,9 +49,8 @@
 			</div>
 
 			<p class="white-text">
-				Desde sus inicios con Gerardo Sofovich y con más de dos décadas de trayectoria, NTG
-				sigue reinventándose con nuevos formatos y experiencias en entretenimiento, publicidad y
-				medios.
+				Desde sus inicios con Gerardo Sofovich y con más de dos décadas de trayectoria, NTG sigue
+				reinventándose con nuevos formatos y experiencias en entretenimiento, publicidad y medios.
 			</p>
 
 			<SocialNetworks />
@@ -116,9 +116,8 @@
 	}
 
 	.logo {
-		font-size: 42px;
-		color: #ffffff;
-		font-weight: bold;
+		height: auto;
+		width: 225px;
 	}
 
 	.container h1 {

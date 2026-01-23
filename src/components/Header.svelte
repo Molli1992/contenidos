@@ -4,6 +4,7 @@
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
 	import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 	import SocialNetworks from './SocialNetworks.svelte';
+	import Logo from '../assets/logo/ntga-logo.png';
 
 	let currentPath: string = $derived(page.url.pathname);
 	let scrolled: boolean = $state(false);
@@ -30,7 +31,7 @@
 
 <header class="header">
 	<a href="/">
-		<h1 class="logo">NTG SA</h1>
+		<img src={Logo} alt="Logo" class="logo" />
 	</a>
 
 	<nav class="center-section">
@@ -121,9 +122,9 @@
 	}
 
 	.logo {
-		font-size: 32px;
-		color: #000000;
-		font-weight: bold;
+		height: auto;
+		width: 175px;
+		filter: grayscale(100%) brightness(0);
 	}
 
 	.center-section,
